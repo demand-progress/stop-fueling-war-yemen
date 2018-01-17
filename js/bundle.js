@@ -173,38 +173,36 @@
 	                        _react2.default.createElement(
 	                            'p',
 	                            { style: { textAlign: 'center' } },
-	                            'On December 14th, three FCC commissioners ignored the will of the public and voted to gut net neutrality protections \u2014 despite polling showing that 83% of Americans opposed the repeal.',
+	                            'What\u2019s Going in Yemen?',
 	                            _react2.default.createElement('br', null),
 	                            _react2.default.createElement('br', null),
-	                            'We still have a chance to stop the FCC, though. Net neutrality champion Senator Ed Markey is leading the charge in the Senate with a resolution that will overrule the FCC. A companion resolution from Representative Mike Doyle will be introduced in the House.',
+	                            'Since March 2015, the U.S. has supported an Arab military coalition led by Saudi Arabia and the United Arab Emirates (UAE) in a civil war in Yemen. The war, that pits an armed Yemeni rebel group called the Houthis against the Yemeni government, has resulted in massive civilian casualties, and the largest humanitarian crisis in the world. It has killed more than 10,000 Yemenis and wounded more than 40,000, the majority of whom were civilians. The United Nations has stated that U.S.-supported airstrikes carried out by the Saudi-led coalition are the leading cause of civilian casualties. Meanwhile Amnesty International and Human Rights Watch have documented coalition airstrikes that have repeatedly targeted schools, hospitals, weddings, public markets, water and sanitation systems, and other vital civilian infrastructure \u2013 all probable war crimes carried out with U.S. support.',
 	                            _react2.default.createElement('br', null),
 	                            _react2.default.createElement('br', null),
-	                            'As the oversight body for the FCC, Congress can overturn this massive and illegitimate giveaway to the telecom industry. Since the FCC voted to end net neutrality, 50 senators have already pledged to reverse the FCC\'s order!',
+	                            'The coalition\u2019s destruction of such vital civilian infrastructure has created the conditions necessary for the world\u2019s largest humanitarian crisis \u2013 a crisis even larger than Syria according to the UN. The coalition has also used starvation as a weapon of war by blockading and interfering with the delivery of vital humanitarian and commercial assistance, which the majority of Yemeni civilians depend on for survival. Thanks to the war, more than 8 MILLION people are now on the brink of starvation and Yemen is home to the largest and fastest growing cholera crisis ever documented. Every 10 minutes, a Yemeni child under 5 dies from starvation or disease. It\u2019s time to end America\u2019s role in this suffering.',
 	                            _react2.default.createElement('br', null),
 	                            _react2.default.createElement('br', null),
-	                            'The resolution is now guaranteed a floor vote, at which point we need just one more senator for it to pass. With all 49 Democrats and Republican Susan Collins supporting the resolution, ',
-	                            _react2.default.createElement(
-	                                'strong',
-	                                null,
-	                                'we need just one more Republican'
-	                            ),
-	                            '. As polls show an overwhelming majority of Republican voters oppose the FCC\'s order, and with more and more Republican lawmakers expressing skepticism about the FCC\'s vote, we have a very strong shot of getting this through the Senate.',
+	                            'The United States\u2019 Role in Yemen\'s Civil War',
 	                            _react2.default.createElement('br', null),
 	                            _react2.default.createElement('br', null),
-	                            'If we flood Congress with petitions and calls, we have a shot at stopping the FCC order. ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { className: 'back-to-form-link', href: '#signThePetition' },
-	                                'Sign the petition and call on Congress to pass the CRA resolution to stop the repeal of net neutrality.'
-	                            ),
+	                            'Congress has never authorized America\u2019s involvement in this war in Yemen, yet for almost three years the United States has literally fueled the conflict and its war crimes. Since the beginning of the intervention in March 2015, the United States has provided midair refueling to coalition jets, shared intelligence for targeting assistance, other logistical support, and sold U.S. bombs to the coalition. Throughout the war, Saudi Arabia and its allies have targeted civilians, hospitals, schools, and farms with American made bombs dropped by planes refueled by America. Meanwhile, the US has provided Saudi Arabia and its allies political cover while they deliberately use starvation and disease as weapons of war, putting 8 million Yemenis a step away from famine. None of this brutality would be possible without continued American support.',
+	                            _react2.default.createElement('br', null),
+	                            _react2.default.createElement('br', null),
+	                            'What does this bill do?',
+	                            _react2.default.createElement('br', null),
+	                            _react2.default.createElement('br', null),
+	                            'America\u2019s unconstitutional war in Yemen has never been authorized by Congress. That\u2019s why Senators Bernie Sanders (I-VT) and Mike Lee (R-UT) introduced a resolution, which would end U.S. military involvement in the Saudi-led coalition\u2019s war in Yemen. The resolution would end U.S. refueling of and intelligence-sharing to coalition warplanes conducting aerial bombings in Yemen. It invokes the War Powers Resolution of 1973 that was passed in the wake of Vietnam to empower Congress as the sole body that can declare war. Under the War Powers Resolution, this important legislation is guaranteed a vote, which means that the Senate will finally debate and vote on this completely unauthorized war soon. This legislation is our best chance to end America\u2019s role in this unconstitutional war and push for peace, which is the only significant way to relieve the suffering of the Yemeni people.',
 	                            _react2.default.createElement('br', null),
 	                            _react2.default.createElement('br', null),
 	                            _react2.default.createElement(
 	                                'strong',
 	                                null,
-	                                'And remember what we\u2019re fighting for:'
-	                            ),
-	                            ' Without net neutrality, the Internet will look more like cable TV, where the content we see is controlled by corporations like Comcast and Verizon. We can\u2019t afford to see the open internet\u2014a revolutionary medium where the exchange of ideas, democratic participation and the ability to organize, especially among marginalized communities, has flourished\u2014fall to the control of corporate gatekeepers.'
+	                                _react2.default.createElement(
+	                                    'a',
+	                                    { className: 'back-to-form-link', href: '#signThePetition' },
+	                                    'Our public dollars should not be funding Saudi and UAE war crimes in Yemen. Will you sign our petition and call your senators today to urge them to support the Sanders-Lee resolution?'
+	                                )
+	                            )
 	                        )
 	                    )
 	                )
@@ -4846,7 +4844,7 @@
 	                _react2.default.createElement(
 	                    'h3',
 	                    null,
-	                    'Congress must stop the FCC\u2019s plan to destroy net neutrality'
+	                    'Tell Congress: Stop fueling war in Yemen'
 	                ),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement('br', null),
@@ -4856,14 +4854,14 @@
 	                    _react2.default.createElement(
 	                        'strong',
 	                        { style: { fontSize: "25px" } },
-	                        'In December, the FCC ignored the will of the public and voted to gut net neutrality protections. But Congress can reverse the FCC\'s order.'
+	                        'Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and may be even push them to the negotiating table.'
 	                    ),
 	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement(
 	                        'div',
 	                        null,
-	                        'Now\u2019s your opportunity to let members of Congress know they must stand with their constituents, not Comcast. They must protect net neutrality by cosponsoring the resolution to overturn the FCC\u2019s decision.'
+	                        'Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
 	                    ),
 	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement('br', null),
@@ -5195,118 +5193,7 @@
 	                            "Built by:"
 	                        ),
 	                        " ",
-	                        _react2.default.createElement("img", { src: "images/demand-progress.png" }),
-	                        _react2.default.createElement(
-	                            "p",
-	                            null,
-	                            "In partnership with: "
-	                        ),
-	                        " ",
-	                        _react2.default.createElement("img", { src: "images/DailyKosLogo.png" })
-	                    ),
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "logos", style: { display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center" } },
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "American Family Voices (AFV)", src: "images/PasAFV.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Center for Media Justice", src: "images/CMJ logo hi-res.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Climate Hawks Vote", src: "images/CHV Logo2.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Color of Change", src: "images/COC-Full-Color.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Common Cause", src: "images/common_cause_logo.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Common Dreams", src: "images/CD_stacked_white.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Consumers Union", src: "images/CU New Logo Hi-res (1).jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Democracy for America", src: "images/DFA-Logo-bottom-white-400.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Free Press Action Fund", src: "images/fp-actionfund.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "LoveArmy", src: "images/LoveArmy.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "The Nation", src: "images/Nation.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "OpenMedia", src: "images/IMG_9304.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "PEN America", src: "images/Pen_Box_lrg (1).jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "People Demanding Action", src: "images/Logo-PeopleDemandingAction.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "People For the American Way", src: "images/PFAW.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Presente Action", src: "images/PresenteAction2016.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Progressive Congress Action Fund", src: "images/IMG_8465.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "Public Citizen", src: "images/PC logo-high resolution.jpg" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "RootsAction.org", src: "images/RootsAction.png" })
-	                        ),
-	                        _react2.default.createElement(
-	                            "a",
-	                            { target: "_blank" },
-	                            _react2.default.createElement("img", { alt: "SumOfUs", src: "images/SumOfUs_lg_color.png" })
-	                        )
+	                        _react2.default.createElement("img", { src: "images/demand-progress.png" })
 	                    ),
 	                    _react2.default.createElement("div", { className: "spacer" }),
 	                    _react2.default.createElement(
