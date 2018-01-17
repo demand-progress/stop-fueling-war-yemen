@@ -8,9 +8,9 @@ class Footer extends Component {
                 <div className="logos-unit">
                     <div className="built-by">
                         <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
-                        <p>In partnership with: </p> <img src="images/DailyKosLogo.png" />
+                        {/* <p>In partnership with: </p> <img src="images/DailyKosLogo.png" /> */}
                     </div>
-                    <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
+                    {/* <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
                        <a target="_blank">
                           <img alt="American Family Voices (AFV)" src="images/PasAFV.jpg" />
                        </a>
@@ -91,7 +91,7 @@ class Footer extends Component {
                             <img alt="SumOfUs" src="images/SumOfUs_lg_color.png" />
                         </a>      
                           
-                    </div>
+                    </div> */}
                     <div className="spacer"></div>
                     <div>
                         <div className="press-inquiries">
