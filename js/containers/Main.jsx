@@ -18,11 +18,7 @@ class Main extends Component {
                     </p>
                     <p style={{color: 'white', textAlign: 'center'}}>
                       <i>
-                        "As your constituent, I urge you to cosponsor the Congressional Review Act (CRA) ‘resolution of disapproval’ to reverse the FCC’s repeal of net neutrality.                       
-                         <br/><br/>
-                        "The FCC order allowing internet providers to slow down and block content at their choosing leaves the public without protections from corporate censorship, and leaves small businesses without the ability to compete with larger sites and services. The effects on free expression and innovation will be devastating.                       
-                        <br/><br/>
-                        “Unless it is stopped, the FCC’s anti-net neutrality order will go down as a historically bad decision negatively impacting millions of Americans who rely on the internet for work, education, news, entertainment, and so much more. Now is the time to stand up against this plan to destroy net neutrality. Stand with your constituents, not Comcast.
+                        As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.
                       </i>
                     </p>
                     <hr/>
