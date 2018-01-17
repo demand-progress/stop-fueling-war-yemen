@@ -15,14 +15,14 @@ class Form extends Component {
     render() {
         return (
           <form className="bftn-form call-action-form" onSubmit={ this.onSubmit.bind(this) }>
-            <h3>Congress must stop the FCC’s plan to destroy net neutrality</h3>
+            <h3>Tell Congress: Stop fueling war in Yemen</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
               <strong style={{ fontSize: "25px" }}>
-                In December, the FCC ignored the will of the public and voted to gut net neutrality protections. But Congress can reverse the FCC's order. 
+                Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and may be even push them to the negotiating table.  
               </strong>
                 <br/><br/>
-                <div>Now’s your opportunity to let members of Congress know they must stand with their constituents, not Comcast. They must protect net neutrality by cosponsoring the resolution to overturn the FCC’s decision.</div>
+                <div>Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</div>
                 <br/><br/>
                 <div>Add your name to send a message (below) to Congress:</div>
             </div>
