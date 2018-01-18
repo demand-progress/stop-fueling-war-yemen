@@ -32,8 +32,8 @@ class CallInitiate extends Component {
         // this.props.changeForm('script');
   
       //#### remember to uncomment
-        // request.open('POST', url, true);
-        // request.send();
+        request.open('POST', url, true);
+        request.send();
         
     }
 
