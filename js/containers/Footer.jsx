@@ -4,6 +4,7 @@ class Footer extends Component {
 
     render() {
         return (
+          <div id="footer">
             <div className="footer">
                 <div className="logos-unit">
                     <div className="built-by">
@@ -117,7 +118,8 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
-            </div>);
+            </div>
+          </div>);
     }
 }
 
