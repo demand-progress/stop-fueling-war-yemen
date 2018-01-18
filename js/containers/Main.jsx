@@ -13,15 +13,6 @@ class Main extends Component {
                     </div>
                 </div>
                 <div className="unit">
-                    <p style={{color: 'white', textAlign: 'center'}}>
-                        <h4>Here's the language that will be sent to Congress:</h4>
-                    </p>
-                    <p style={{color: 'white', textAlign: 'center'}}>
-                      <i>
-                        As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.
-                      </i>
-                    </p>
-                    <hr/>
                     <h4 style={{color: 'white', textAlign: 'center'}}>More information:</h4>
                     <p style={{ textAlign: 'center' }}>
                         What’s Going in Yemen?                       
