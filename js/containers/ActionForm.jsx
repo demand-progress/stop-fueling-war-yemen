@@ -63,8 +63,8 @@ class ActionForm extends Component {
         'source': this.state.source || 'website',
         'want_progress': 1
       };
-      //#### remember to uncomment
-      // this.sendFormToActionKit(fields);
+  
+      this.sendFormToActionKit(fields);
     }
     
     sendFormToActionKit(fields) {
@@ -89,8 +89,8 @@ class ActionForm extends Component {
         input.value = fields[key];
         form.appendChild(input);
       });
-      //#### must umcomment to actually work
-      // form.submit()
+      
+      form.submit()
     }
     
     render() {
