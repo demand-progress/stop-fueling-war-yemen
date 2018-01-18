@@ -4,13 +4,13 @@ import Form from './Form.jsx';
 class Main extends Component {
 
     render() {
-        return (<div className="unit">
+        return (
+          <div className="unit">
             <div className="hero" id="bftn-action-form">
                 <div className="">
                     <div>
                         <Form />
                     </div>
-
                 </div>
                 <div className="unit">
                     <p style={{color: 'white', textAlign: 'center'}}>
