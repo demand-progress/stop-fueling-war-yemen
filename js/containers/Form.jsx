@@ -8,7 +8,7 @@ class Form extends Component {
         super(props);
 
         this.state = getQueryVariables();
-        this.state.submitted = false;
+        this.state.submitted = true;
         this.state.countDown = 5;
     }
 
@@ -46,22 +46,28 @@ class Form extends Component {
               <div className="modal-thanks">
                 <a className="close-thanks" href="#" onClick={ this.closeModal.bind(this) }>×</a>
                 <header>
-                  <h2 id="modal-header-thanks">Thanks for signing.</h2>
+                  <h2 id="modal-header-thanks">Thanks for signing. <br/> Now, could you make a call?</h2>
                 </header>
                 <article>
-                  <p>
                     <p style={{fontSize: '20px', fontWeight: 'bold'}}>
-                    Now, one of the most impactful things you can do to save net neutrality is to <strong>CALL CONGRESS TODAY</strong> and tell your lawmakers to support the ‘resolution of disapproval’ to overturn the FCC vote.
+                      Make a call to stop warrantless spying on Americans:
                   </p>
-                </p>
-                  <h4 style={{color: 'black'}}>Call: <a href="tel:8582640403">858-264-0403</a></h4>
-                  <p>
-                    We will connect you to the offices of your lawmakers.
+                <div className="phone-form">
+                    <form onSubmit={ this.onPhoneFormSubmit.bind(this) }>
+                        <input placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
+                        <button className="btn">CALL CONGRESS
+                            <img src="images/phone.svg" />
+                        </button>
+                    </form>
+                    <div className="privacy" style={{fontSize:"12px", fontStyle:"italic", textAlign:"center", padding:"5px 0 20px", lineHeight:"1.5"}}>
+                        This tool uses <a href="http://callpower.org/" target="_blank">Call Power</a>
+                        <br/>
+                        Or dial <a href="tel:+12028998938">202-899-8938</a> to connect.
+                    </div>
+                </div>
+                    Just enter your number and click “call”
                     <br/><br/>
-                    You can use this script when talking to them —  just introduce yourself, be polite, and say:
-                    <br/><br/>
-                    <i>"As your constituent, I urge you to cosponsor the Congressional Review Act ‘resolution of disapproval’ to reverse the FCC's December vote repealing net neutrality. An open internet is vital for free expression and innovation.’</i>
-                  </p>
+                    We’ll connect you with members of Congress and key party leaders, and give you a script of what you can say.
                 </article>
               </div>
             </div>
@@ -166,6 +172,36 @@ class Form extends Component {
         });
 
         form.submit()
+    }
+    
+    onPhoneFormSubmit(e) {
+        e.preventDefault();
+
+        const phoneField = e.target.fieldPhone;       
+        const number = phoneField.value.replace(/[^\d]/g, '');
+
+        if (number.length !== 10) {
+            phoneField.focus();
+            return alert('Please enter your 10 digit phone number.');
+        }
+
+        const request = new XMLHttpRequest();
+        let url = `https://demandprogress.callpower.org/call/create?campaignId=6&userPhone=${number}`;
+
+        let zip
+        try {
+            if ('zip' in sessionStorage) {
+                zip = `${sessionStorage.zip}`;
+            }
+        } catch (err) {
+            // Oh well
+        }
+
+        this.props.changeForm('script');
+
+        request.open('POST', url, true);
+        request.send();
+        
     }
 
 }

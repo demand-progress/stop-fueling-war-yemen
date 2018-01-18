@@ -37,7 +37,7 @@ class PhoneForm extends Component {
                 <div className="phone-form">
                     <form onSubmit={ this.onSubmit.bind(this) }>
                         <input placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
-                        <button>CALL CONGRESS
+                        <button className="btn">CALL CONGRESS
                             <img src="images/phone.svg" />
                         </button>
                     </form>
