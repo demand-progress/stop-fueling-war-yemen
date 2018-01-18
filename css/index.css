@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-article, aside, footer, header, nav, section {
+article, aside, #footer, header, nav, section {
     display: block;
 }
 
@@ -750,13 +750,13 @@ template {
     opacity: 0.3;
 }
 
-.bftn-homepage footer {
+.bftn-homepage #footer {
     background-color: #1f1c35;
     padding: 0px 30px 0px 30px;
     margin-top: 100px;
 }
 
-.bftn-homepage footer .logos {
+.bftn-homepage #footer .logos {
     background-color: #fff;
     width: 1000px;
     padding: 20px 0;
@@ -764,33 +764,33 @@ template {
     text-align: center;
 }
 
-.bftn-homepage footer .logos-unit {
+.bftn-homepage #footer .logos-unit {
     width: 1000px;
     margin: 0px auto;
 }
 
-.bftn-homepage footer .logos a {
+.bftn-homepage #footer .logos a {
     line-height: 62px;
 }
 
-.bftn-homepage footer .logos img {
+.bftn-homepage #footer .logos img {
     max-width: 200px;
     margin: 15px;
 }
 
-.bftn-homepage footer .logos .fftf {
+.bftn-homepage #footer .logos .fftf {
     margin-right: 40px;
     position: relative;
     top: -6px;
 }
 
-.bftn-homepage footer .logos .demandprogress {
+.bftn-homepage #footer .logos .demandprogress {
     position: relative;
     top: 8px;
     margin-right: 40px;
 }
 
-.bftn-homepage footer .press-inquiries {
+.bftn-homepage #footer .press-inquiries {
     width: 40%;
     float: right;
     padding-top: 10px;
@@ -798,37 +798,37 @@ template {
     color: #717093;
 }
 
-.bftn-homepage footer .press-inquiries a {
+.bftn-homepage #footer .press-inquiries a {
     color: #FFF;
 }
 
-.bftn-homepage footer .press-inquiries .no-em {
+.bftn-homepage #footer .press-inquiries .no-em {
     text-decoration: none;
 }
 
-.bftn-homepage footer .press-inquiries h3 {
+.bftn-homepage #footer .press-inquiries h3 {
     margin-bottom: 15px;
 }
 
-.bftn-homepage footer .press-inquiries ul {
+.bftn-homepage #footer .press-inquiries ul {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     list-style-type: none;
     padding: 0;
 }
 
-.bftn-homepage footer .press-inquiries ul li {
+.bftn-homepage #footer .press-inquiries ul li {
     margin: 0 0 8px 0;
 }
 
-.bftn-homepage footer .social-media {
+.bftn-homepage #footer .social-media {
     float: left;
     height: 90px;
     width: 30%;
     margin-left: 5%;
 }
 
-.bftn-homepage footer .social-media a {
+.bftn-homepage #footer .social-media a {
     display: block;
     width: 100%;
     font-family: "Open Sans", sans-serif;
@@ -846,36 +846,36 @@ template {
     text-align: center;
 }
 
-.bftn-homepage footer .social-media a span {
+.bftn-homepage #footer .social-media a span {
     margin-left: 5px;
 }
 
-.bftn-homepage footer .social-media img {
+.bftn-homepage #footer .social-media img {
     position: absolute;
     height: 40px;
     top: 5px;
     right: 15px;
 }
 
-.bftn-homepage footer .social-media .twitter {
+.bftn-homepage #footer .social-media .twitter {
     background-color: #2ecaf8;
     margin-top: 30px;
     margin-bottom: 10px;
 }
 
-.bftn-homepage footer .social-media .twitter:hover {
+.bftn-homepage #footer .social-media .twitter:hover {
     background-color: #44bee2;
 }
 
-.bftn-homepage footer .social-media .facebook {
+.bftn-homepage #footer .social-media .facebook {
     background-color: #224769;
 }
 
-.bftn-homepage footer .social-media .facebook:hover {
+.bftn-homepage #footer .social-media .facebook:hover {
     background-color: #30465b;
 }
 
-.bftn-homepage footer .built-by {
+.bftn-homepage #footer .built-by {
     background-color: #fff;
     clear: both;
     font-weight: bold;
@@ -887,7 +887,7 @@ template {
     border-radius: 3px 3px 0 0;
 }
 
-.bftn-homepage footer .built-by img {
+.bftn-homepage #footer .built-by img {
     position: relative;
     top: 2px;
     width: 300px;
@@ -1267,7 +1267,7 @@ template {
     margin: 0 0.5rem 0.1rem 0;
 }
 
-.bftn-homepage .modal #after-action-footer button.facebook img, .bftn-homepage .modal #after-action-footer button.twitter img {
+.bftn-homepage .modal #after-action-footer button.facebook img, .bftn-homepage .modal #after-action-#footer button.twitter img {
     max-width: 1.5rem;
     max-height: 1.5rem;
     margin-right: 0.2rem;
@@ -1777,7 +1777,7 @@ template {
         display: block;
     }
 
-    .bftn-homepage footer .logos-unit {
+    .bftn-homepage #footer .logos-unit {
         width: 90%;
     }
 
@@ -1874,7 +1874,7 @@ template {
         font-size: 14px;
     }
     
-    .bftn-homepage footer .logos {
+    .bftn-homepage #footer .logos {
         width: 100%;
         border: none;
         text-align: center;
@@ -1883,36 +1883,36 @@ template {
         float: none;
     }
 
-    .bftn-homepage footer .logos a {
+    .bftn-homepage #footer .logos a {
         display: block;
     }
 
-    .bftn-homepage footer .logos .fftf, .bftn-homepage footer .logos .demandprogress, .bftn-homepage footer .logos .freepress {
+    .bftn-homepage #footer .logos .fftf, .bftn-homepage #footer .logos .demandprogress, .bftn-homepage #footer .logos .freepress {
         margin: 0;
     }
 
-    .bftn-homepage footer .social-media {
+    .bftn-homepage #footer .social-media {
         width: 100%;
         margin: 0;
         border: none;
         text-align: center;
     }
 
-    .bftn-homepage footer .social-media .twitter {
+    .bftn-homepage #footer .social-media .twitter {
         margin-top: 20px;
     }
 
-    .bftn-homepage footer .press-inquiries {
+    .bftn-homepage #footer .press-inquiries {
         width: 100%;
         float: right;
     }
 
-    .bftn-homepage footer .built-by {
+    .bftn-homepage #footer .built-by {
         padding-bottom: 80px;
         width: auto;
     }
 
-    .bftn-homepage footer .built-by img {
+    .bftn-homepage #footer .built-by img {
         width: 90%;
     }
 }
@@ -2023,7 +2023,7 @@ template {
 }
 
 @media screen and (max-width: 370px) {
-    .bftn-homepage footer .built-by {
+    .bftn-homepage #footer .built-by {
         width: auto;
     }
 }
