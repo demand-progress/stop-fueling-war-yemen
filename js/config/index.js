@@ -1,6 +1,6 @@
 const CONF = {
-    actionKitPageShortName: 'stop-fcc',
-    actionKitPageId: 2160
+    actionKitPageShortName: 'stop-fueling-war-yemen',
+    actionKitPageId: 2172
 };
 const URLS = {
     actionKit: 'https://act.demandprogress.org/act/',
