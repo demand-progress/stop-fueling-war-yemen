@@ -1,7 +1,6 @@
 // Modules
 const React = require('react');
 const ReactDOM = require('react-dom');
-import { BrowserRouter, Route } from 'react-router-dom'
 import App from './containers/App.jsx'
 // Checking for outdated browsers
 (() => {
@@ -17,11 +16,12 @@ import App from './containers/App.jsx'
         alert('Unfortunately your browser, Android 2.3, is not supported.\nPlease visit the site with a modern browser like Firefox or Chrome.\nThanks!');
     }
 })()
-
+//need to change back to no include Route 
+//only need to send up both components to app 
 ReactDOM.render((
-     <BrowserRouter>
-          <Route path="/" component={ App }/>
-     </BrowserRouter>
+     <div>
+       < App />
+     </div>
      ),
      document.getElementById('root')
 );
