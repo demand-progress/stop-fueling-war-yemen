@@ -1,12 +1,16 @@
+const path = require('path');
+const BUILD_DIR = path.resolve('./public');
+const APP_DIR = path.resolve('./src');
+
 module.exports = [{
     devServer: {
         inline:true,
         port: 8008
     },
-    entry: "./js/call.jsx",
+    entry: APP_DIR + "/call.jsx",
     output: {
-        path: __dirname + '/js',
-        filename: "bundle.js"
+        path: BUILD_DIR,
+        filename: "js/bundle.js"
     },
     module: {
         loaders: [{
