@@ -11,18 +11,33 @@ class Footer extends Component {
                         <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
                         {/* <p>In partnership with: </p> <img src="images/DailyKosLogo.png" /> */}
                     </div>
-                    <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
-                    
+                    {/* <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
+                       <a target="_blank">
+                          <img alt="American Family Voices (AFV)" src="images/PasAFV.jpg" />
+                       </a>
+                      
                         <a target="_blank">
-                            <img alt="Common Defense" src="images/Common-Defense-logo_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Credo" src="images/CREDO-logo_preview.png" />
+                            <img alt="Center for Media Justice" src="images/CMJ logo hi-res.jpg" />
                         </a>
                       
                         <a target="_blank">
-                            <img alt="Daily Kos" src="images/DailyKosLogo.png" />
+                            <img alt="Climate Hawks Vote" src="images/CHV Logo2.jpg" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Color of Change" src="images/COC-Full-Color.png" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Common Cause" src="images/common_cause_logo.jpg" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Common Dreams" src="images/CD_stacked_white.jpg" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Consumers Union" src="images/CU New Logo Hi-res (1).jpg" />
                         </a>
                         
                         <a target="_blank">
@@ -30,44 +45,54 @@ class Footer extends Component {
                         </a>
                         
                         <a target="_blank">
-                            <img alt="Friends Committee on National Legislation" src="images/FCNL logo_preview copy-iloveimg-resized.png" />
+                            <img alt="Free Press Action Fund" src="images/fp-actionfund.png" />
                         </a>
                         
                         <a target="_blank">
-                            <img alt="Just Foreign Policy" src="images/JFP logo-long_preview.jpeg" />
+                            <img alt="LoveArmy" src="images/LoveArmy.png" />
                         </a>
                         
                         <a target="_blank">
-                            <img alt="Mpower Change" src="images/mpower_logo_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Our Revolution" src="images/OR-logo_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Peace Action" src="images/PeaceActionLogo_rgb_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Roots Action" src="images/RootsAction.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Stand" src="images/stand_rebrand_logo-transparent-bg_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Win Without War" src="images/winwithoutwar.jpg" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="The Yemen Peace Project" src="images/YPP-logo_preview.png" />
+                            <img alt="The Nation" src="images/Nation.jpg" />
                         </a>
 
+                        <a target="_blank">
+                            <img alt="OpenMedia" src="images/IMG_9304.jpg" />
+                        </a>
                         
+                        <a target="_blank">
+                            <img alt="PEN America" src="images/Pen_Box_lrg (1).jpg" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="People Demanding Action" src="images/Logo-PeopleDemandingAction.jpg" />
+                        </a>
 
-                    </div>
+                        <a target="_blank">
+                            <img alt="People For the American Way" src="images/PFAW.png" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Presente Action" src="images/PresenteAction2016.png" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Progressive Congress Action Fund" src="images/IMG_8465.jpg" />
+                        </a>
+
+                        <a target="_blank">
+                            <img alt="Public Citizen" src="images/PC logo-high resolution.jpg" />
+                        </a>
+
+                        <a target="_blank">
+                            <img alt="RootsAction.org" src="images/RootsAction.png" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="SumOfUs" src="images/SumOfUs_lg_color.png" />
+                        </a>      
+                          
+                    </div> */}
                     <div className="spacer"></div>
                     <div>
                         <div className="press-inquiries">
