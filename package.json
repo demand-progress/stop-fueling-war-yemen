@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "npm install --loglevel=error & webpack --colors --watch",
-    "dev:start": "webpack-dev-server --open"
+    "dev:start": "webpack -d --watch & webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
