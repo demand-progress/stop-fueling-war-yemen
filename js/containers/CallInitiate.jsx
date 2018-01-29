@@ -18,7 +18,7 @@ class CallInitiate extends Component {
         }
 
         const request = new XMLHttpRequest();
-        let url = `https://demandprogress.callpower.org/call/create?campaignId=6&userPhone=${number}`;
+        let url = `https://demandprogress.callpower.org/call/create?campaignId=16&userPhone=${number}`;
 
         let zip
         try {
@@ -31,7 +31,6 @@ class CallInitiate extends Component {
 
         // this.props.changeForm('script');
   
-      //#### remember to uncomment
         request.open('POST', url, true);
         request.send();
         
@@ -62,7 +61,7 @@ class CallInitiate extends Component {
                 <div className="privacy" style={{fontSize:"12px", fontFamily:"inherit", fontStyle:"italic", textAlign:"center", padding:"10px 0 20px", lineHeight:"1.5"}}>
                     This tool uses <a href="http://callpower.org/" target="_blank">Call Power</a>
                     <br/>
-                    Or dial <a href="tel:+12028998938">202-899-8938</a> to connect.
+                    Or dial <a href="tel:+18337867927">833-786-7927</a> to connect.
                 </div>
               </div>
                 Just enter your number and click “call”
