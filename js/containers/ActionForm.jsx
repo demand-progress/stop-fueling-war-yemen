@@ -97,7 +97,7 @@ class ActionForm extends Component {
       return(
         <div>
           <form className="bftn-form call-action-form" onSubmit={ this.onSubmit.bind(this) }>
-            <h3>Tell Congress: Stop fueling war in Yemen</h3>
+            <h3>Tell Congress: Stop Fueling War in Yemen</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
               <strong style={{ fontSize: "25px" }}>
