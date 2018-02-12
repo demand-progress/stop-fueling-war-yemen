@@ -5244,7 +5244,7 @@
 	
 	    _this.state = (0, _utils.getQueryVariables)();
 	    _this.state.submitted = false;
-	    _this.state.callMade = false;
+	    _this.state.callMade = true;
 	
 	    _this.callMade = _this.callMade.bind(_this);
 	    _this.formSubmitted = _this.formSubmitted.bind(_this);
@@ -5512,28 +5512,13 @@
 	            _react2.default.createElement(
 	                'strong',
 	                null,
-	                'Here\'s what you can say:'
+	                'We will connect you the offices of your senators.  You can tell them:'
 	            )
 	        ),
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            'Hello,'
-	        ),
-	        _react2.default.createElement(
-	            'p',
-	            null,
-	            'I am a constituent of Senator _______________ and I am calling to ask them to support the War Powers Resolution to stop U.S. military support for the Saudi-led coalition in Yemen.'
-	        ),
-	        _react2.default.createElement(
-	            'p',
-	            null,
-	            'Over eight million people are facing the threat of famine as the result of my tax dollars supporting the Saudi-led coalition in Yemen\u2019s civil war. The Sanders-Lee bipartisan, privileged resolution invoking the War Powers Resolution, requires a vote on ending U.S. military support for this war. As your constituent, I urge you to cosponsor and vote YES on the Sanders-Lee resolution to ensure that our nation stops causing suffering in a country already devastated by conflict, cholera, and famine.'
-	        ),
-	        _react2.default.createElement(
-	            'p',
-	            null,
-	            'Thank you.'
+	            'I am a constituent of Senator _____.  Please support the Sanders-Lee resolution that would end American involvement in the war on Yemen.  American military aid is fueling a humanitarian crisis, and it is time for this to stop.'
 	        )
 	    );
 	};
