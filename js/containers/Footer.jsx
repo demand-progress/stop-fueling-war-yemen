@@ -9,65 +9,78 @@ class Footer extends Component {
                 <div className="logos-unit">
                     <div className="built-by">
                         <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
-                        {/* <p>In partnership with: </p> <img src="images/DailyKosLogo.png" /> */}
-                    </div>
-                    <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
-                    
-                        <a target="_blank">
-                            <img alt="Common Defense" src="images/Common-Defense-logo_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Credo" src="images/CREDO-logo_preview.png" />
-                        </a>
-                      
-                        <a target="_blank">
-                            <img alt="Daily Kos" src="images/DailyKosLogo.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Democracy for America" src="images/DFA-Logo-bottom-white-400.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Friends Committee on National Legislation" src="images/FCNL logo_preview copy-iloveimg-resized.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Just Foreign Policy" src="images/JFP logo-long_preview.jpeg" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Mpower Change" src="images/mpower_logo_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Our Revolution" src="images/OR-logo_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Peace Action" src="images/PeaceActionLogo_rgb_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Roots Action" src="images/RootsAction.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Stand" src="images/stand_rebrand_logo-transparent-bg_preview.png" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="Win Without War" src="images/winwithoutwar.jpg" />
-                        </a>
-                        
-                        <a target="_blank">
-                            <img alt="The Yemen Peace Project" src="images/YPP-logo_preview.png" />
-                        </a>
-
-                        
-
-                    </div>
+                        <p style={{marginBottom: "50px"}}><br/><br/>Participating organizations:</p>  
+                          <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor:"white"}}>
+                
+                              <a target="_blank">
+                                  <img alt="Common Defense" src="images/Common-Defense-logo_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Credo" src="images/CREDO-logo_preview.png" />
+                              </a>
+                            
+                              <a target="_blank">
+                                  <img alt="Daily Kos" src="images/DailyKosLogo.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Democracy for America" src="images/DFA-Logo-bottom-white-400.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Friends Committee on National Legislation" src="images/FCNL logo_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Just Foreign Policy" src="images/JFP logo-long_preview.jpeg" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="The Nation" src="images/Nation.jpg" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Peace Action" src="images/PeaceActionLogo_rgb_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Progressive Congress Action Fund" src="images/progressive_congress_fund.jpg" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Roots Action" src="images/RootsAction.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Stand" src="images/stand_rebrand_logo-transparent-bg_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Win Without War" src="images/winwithoutwar.jpg" />
+                              </a>
+                              
+                          </div>
+                          <p style={{marginBottom: "50px"}}>Endorsing organizations:</p> 
+                          <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor:"white"}}>
+                          
+                              <a target="_blank">
+                                  <img alt="Credo" src="images/CREDO-logo_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Mpower Change" src="images/mpower_logo_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="Our Revolution" src="images/OR-logo_preview.png" />
+                              </a>
+                  
+                              <a target="_blank">
+                                  <img alt="The Yemen Peace Project" src="images/YPP-logo_preview.png" />
+                              </a>
+                          </div>
+                      </div> 
                     <div className="spacer"></div>
                     <div>
                         <div className="press-inquiries">

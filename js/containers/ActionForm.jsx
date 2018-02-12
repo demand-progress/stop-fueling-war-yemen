@@ -97,11 +97,11 @@ class ActionForm extends Component {
       return(
         <div>
           <form className="bftn-form call-action-form" onSubmit={ this.onSubmit.bind(this) }>
-            <h3>Tell Congress: Stop fueling war in Yemen</h3>
+            <h3>Tell Congress: Stop Fueling War in Yemen</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
               <strong style={{ fontSize: "25px" }}>
-                Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and may be even push them to the negotiating table.  
+                Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.  
               </strong>
                 <br/><br/>
                 <div>Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</div>
