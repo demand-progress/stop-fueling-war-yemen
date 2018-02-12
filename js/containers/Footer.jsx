@@ -42,11 +42,15 @@ class Footer extends Component {
                         </a>
                         
                         <a target="_blank">
-                            <img alt="Our Revolution" src="images/OR-logo_preview.png" />
+                            <img alt="The Nation" src="images/Nation.jpg" />
                         </a>
                         
                         <a target="_blank">
                             <img alt="Peace Action" src="images/PeaceActionLogo_rgb_preview.png" />
+                        </a>
+                        
+                        <a target="_blank">
+                            <img alt="Progressive Congress Action Fund" src="images/progressive_congress_fund.jpg" />
                         </a>
                         
                         <a target="_blank">
