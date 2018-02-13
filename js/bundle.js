@@ -5439,7 +5439,6 @@
 	        key: 'render',
 	        value: function render() {
 	            var button = null;
-	
 	            if (this.setState.sent) {
 	                button = _react2.default.createElement(
 	                    'button',
