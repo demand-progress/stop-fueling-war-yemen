@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { CONF } from '../config'
 
 class CallInitiate extends Component {
 
@@ -18,7 +19,8 @@ class CallInitiate extends Component {
         }
 
         const request = new XMLHttpRequest();
-        let url = `https://demandprogress.callpower.org/call/create?campaignId=16&userPhone=${number}`;
+        let url = `https://demandprogress.callpower.org/call/create?campaignId=${CONF.callPowerId}&userPhone=${number}`;
+        console.log(url); 
 
         let zip
         try {
