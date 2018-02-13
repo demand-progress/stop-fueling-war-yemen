@@ -4962,6 +4962,16 @@
 	                                    "a",
 	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Win Without War", src: "images/winwithoutwar.jpg" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "Womens Action For New Directions", src: "images/WANDLogo.gif" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "World Beyond War", src: "images/World Beyond War 300x150_preview.jpeg" })
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -4972,6 +4982,11 @@
 	                            _react2.default.createElement(
 	                                "div",
 	                                { className: "logos", style: { display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor: "white" } },
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "Code Pink", src: "images/CP_logo_preview(1).jpeg" })
+	                                ),
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
@@ -4986,6 +5001,11 @@
 	                                    "a",
 	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Our Revolution", src: "images/OR-logo_preview.png" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "United For Peace And Justice", src: "images/utpj.png" })
 	                                ),
 	                                _react2.default.createElement(
 	                                    "a",
