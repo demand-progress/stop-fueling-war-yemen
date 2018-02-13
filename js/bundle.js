@@ -5243,6 +5243,7 @@
 	    _this.state = (0, _utils.getQueryVariables)();
 	    _this.state.submitted = false;
 	    _this.state.callMade = false;
+	    _this.state.emailAction = false;
 	
 	    _this.callMade = _this.callMade.bind(_this);
 	    _this.formSubmitted = _this.formSubmitted.bind(_this);
@@ -5250,6 +5251,13 @@
 	  }
 	
 	  _createClass(Form, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.setState({
+	        emailAction: window.location.href.indexOf('email=call') !== -1
+	      });
+	    }
+	  }, {
 	    key: 'callMade',
 	    value: function callMade(evt) {
 	      evt.preventDefault();
@@ -5270,9 +5278,8 @@
 	    key: 'render',
 	    value: function render() {
 	      var form = null;
-	      var location = window.location.href.indexOf('email=call') !== -1;
 	
-	      if (location || this.state.submitted) {
+	      if (this.state.emailAction || this.state.submitted) {
 	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
 	      } else if (this.state.callMade) {
 	        form = _react2.default.createElement(_PhoneScript2.default, null);
@@ -5876,7 +5883,7 @@
 	              { className: 'flex' },
 	              _react2.default.createElement(
 	                'button',
-	                { className: 'btn', onClick: this.props.formSubmitted },
+	                { className: 'btn' },
 	                _react2.default.createElement(
 	                  'span',
 	                  null,
