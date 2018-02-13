@@ -5210,8 +5210,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _config = __webpack_require__(/*! ../config */ 41);
-	
 	var _utils = __webpack_require__(/*! ../utils */ 42);
 	
 	var _PhoneScript = __webpack_require__(/*! ./PhoneScript.jsx */ 43);
@@ -5272,7 +5270,6 @@
 	    key: 'render',
 	    value: function render() {
 	      var form = null;
-	
 	      if (this.state.submitted) {
 	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
 	      } else if (this.state.callMade) {
@@ -5308,14 +5305,16 @@
 	});
 	var CONF = {
 	    actionKitPageShortName: 'stop-fueling-war-yemen',
-	    actionKitPageId: 2172
+	    actionKitPageId: 2172,
+	    prettyCampaignName: 'Stop Fueling War in Yemen',
+	    callCampaign: 'stop-fueling-war-yemen'
 	};
 	var URLS = {
 	    actionKit: 'https://act.demandprogress.org/act/',
 	    count: 'https://act.demandprogress.org/progress/' + CONF.actionKitPageShortName + '?callback=onFetchSignatureCounts',
 	    facebook: 'https://www.facebook.com/sharer.php?u=',
 	    twitter: 'https://twitter.com/intent/tweet?text=',
-	    feedack: 'https://dp-feedback-tool.herokuapp.com/api/v1/feedback?'
+	    feedback: 'https://dp-feedback-tool.herokuapp.com/api/v1/feedback?'
 	};
 	
 	exports.CONF = CONF;
@@ -5372,6 +5371,12 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _config = __webpack_require__(/*! ../config */ 41);
+	
+	var _ajax = __webpack_require__(/*! ../utils/ajax */ 194);
+	
+	var _ajax2 = _interopRequireDefault(_ajax);
+	
 	var _PhoneScriptText = __webpack_require__(/*! ./PhoneScriptText.jsx */ 44);
 	
 	var _PhoneScriptText2 = _interopRequireDefault(_PhoneScriptText);
@@ -5383,9 +5388,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import { urls, config } from '../../config/'
-	// import ajax from '../../utils/ajax'
-	
 	
 	var PhoneScriptForm = function (_Component) {
 	    _inherits(PhoneScriptForm, _Component);
@@ -5393,7 +5395,12 @@
 	    function PhoneScriptForm(props) {
 	        _classCallCheck(this, PhoneScriptForm);
 	
-	        return _possibleConstructorReturn(this, (PhoneScriptForm.__proto__ || Object.getPrototypeOf(PhoneScriptForm)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (PhoneScriptForm.__proto__ || Object.getPrototypeOf(PhoneScriptForm)).call(this, props));
+	
+	        _this.state = {
+	            sent: false
+	        };
+	        return _this;
 	    }
 	
 	    _createClass(PhoneScriptForm, [{
@@ -5402,8 +5409,8 @@
 	            e.preventDefault();
 	
 	            var data = {
-	                campaign: config.callCampaign,
-	                subject: 'Feedback from ' + (config.prettyCampaignName || config.callCampaign),
+	                campaign: _config.CONF.callCampaign,
+	                subject: 'Feedback from ' + (_config.CONF.prettyCampaignName || _config.CONF.callCampaign),
 	                text: ''
 	            };
 	
@@ -5413,7 +5420,7 @@
 	                data.text += field.name + ':\n' + field.value + '\n\n';
 	            });
 	
-	            var url = urls.feedback;
+	            var url = _config.URLS.feedback;
 	
 	            for (var key in data) {
 	                url += key;
@@ -5422,7 +5429,7 @@
 	                url += '&';
 	            }
 	
-	            ajax.get(url);
+	            _ajax2.default.get(url);
 	
 	            this.setState({
 	                sent: true
@@ -5431,6 +5438,20 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var button = null;
+	            if (this.setState.sent) {
+	                button = _react2.default.createElement(
+	                    'button',
+	                    { className: 'btn' },
+	                    'Thank You!'
+	                );
+	            } else {
+	                button = _react2.default.createElement(
+	                    'button',
+	                    { className: 'btn', onClick: this.onClickSendFeedback.bind(this), type: 'submit', name: 'submit' },
+	                    'Send Feedback'
+	                );
+	            }
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -5465,13 +5486,9 @@
 	                        null,
 	                        'How did it go?'
 	                    ),
-	                    _react2.default.createElement('textarea', { required: 'required', type: 'text', name: 'How did it go?', id: 'how', style: { 'width': '100%', marginBottom: '10px' }, rows: '4' }),
+	                    _react2.default.createElement('textarea', { required: 'required', type: 'text', name: 'How did it go?', id: 'how', style: { 'fontSize': '24px', 'width': '100%', marginBottom: '10px' }, rows: '4' }),
 	                    _react2.default.createElement('br', null),
-	                    _react2.default.createElement(
-	                        'button',
-	                        { className: 'btn', onClick: this.onClickSendFeedback.bind(this), type: 'submit', name: 'submit' },
-	                        'Send Feedback'
-	                    )
+	                    button
 	                ),
 	                _react2.default.createElement('hr', null)
 	            );
@@ -5686,6 +5703,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _utils = __webpack_require__(/*! ../utils */ 42);
+	
+	var _config = __webpack_require__(/*! ../config */ 41);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5700,7 +5721,10 @@
 	  function ActionForm(props) {
 	    _classCallCheck(this, ActionForm);
 	
-	    return _possibleConstructorReturn(this, (ActionForm.__proto__ || Object.getPrototypeOf(ActionForm)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (ActionForm.__proto__ || Object.getPrototypeOf(ActionForm)).call(this, props));
+	
+	    _this.state = (0, _utils.getQueryVariables)();
+	    return _this;
 	  }
 	
 	  _createClass(ActionForm, [{
@@ -5757,7 +5781,7 @@
 	        'address1': address1.value.trim(),
 	        'zip': zip.value.trim(),
 	        'opt_in': 1,
-	        'page': CONF.actionKitPageShortName,
+	        'page': _config.CONF.actionKitPageShortName,
 	        'source': this.state.source || 'website',
 	        'want_progress': 1
 	      };
@@ -5776,7 +5800,7 @@
 	      // Form
 	      var form = document.createElement('form');
 	      form.style.display = 'none';
-	      form.setAttribute('action', URLS.actionKit);
+	      form.setAttribute('action', _config.URLS.actionKit);
 	      form.setAttribute('method', 'post');
 	      form.setAttribute('target', 'actionkit-iframe');
 	      document.body.appendChild(form);
@@ -23570,6 +23594,47 @@
 	
 	module.exports = ReactDOMInvalidARIAHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 4)))
+
+/***/ }),
+/* 194 */
+/*!**************************!*\
+  !*** ./js/utils/ajax.js ***!
+  \**************************/
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var ajax = {
+	    get: function get(url, callback) {
+	        callback = callback || function () {};
+	
+	        var xhr = new XMLHttpRequest();
+	        xhr.onreadystatechange = function () {
+	            if (xhr.readyState === 4 && callback) {
+	                callback(xhr.response);
+	            }
+	        };
+	        xhr.open('get', url, true);
+	        xhr.send();
+	    },
+	    post: function post(url, formData, callback) {
+	        callback = callback || function () {};
+	
+	        var xhr = new XMLHttpRequest();
+	        xhr.onreadystatechange = function () {
+	            if (xhr.readyState === 4 && callback) {
+	                callback(xhr.response);
+	            }
+	        };
+	        xhr.open('post', url, true);
+	        xhr.send(formData);
+	    }
+	};
+	
+	exports.default = ajax;
 
 /***/ })
 /******/ ]);

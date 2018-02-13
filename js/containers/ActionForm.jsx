@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { getQueryVariables } from '../utils'
+import { CONF, URLS } from '../config'
 
 class ActionForm extends Component {
 
     constructor(props) {
         super(props);
+        this.state = getQueryVariables();
     }
     
     onSubmit(evt) {
