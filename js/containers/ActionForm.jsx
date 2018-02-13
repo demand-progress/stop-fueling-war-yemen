@@ -14,14 +14,15 @@ class ActionForm extends Component {
       
       const form = evt.target;
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-      
       const name = form.name;
-      if (!name.value.trim()) {
+      const nameRegex = /^[A-Za-z '.-]+$/.test(name.value)
+      
+      
+      if (!name.value.trim() || !nameRegex) {
         name.focus();
         alert('Please enter your name.');
         return;
       }
-      
       
       const email = form.email;
       if (!email.value.trim()) {
@@ -66,7 +67,7 @@ class ActionForm extends Component {
         'source': this.state.source || 'website',
         'want_progress': 1
       };
-  
+      
       this.sendFormToActionKit(fields);
     }
     
@@ -93,7 +94,7 @@ class ActionForm extends Component {
         form.appendChild(input);
       });
       
-      form.submit()
+      // form.submit()
     }
     
     render() {
@@ -113,7 +114,7 @@ class ActionForm extends Component {
             </div>
             <div id="signThePetition">
               <div className="flex">
-                <input type="text" className="form-input" name="name" placeholder="Your Name" />
+                <input type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
                 <input type="email" className="form-input" name="email" placeholder="Your Email" />
               </div>
               <div className="flex">
@@ -121,7 +122,8 @@ class ActionForm extends Component {
                 <input type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
               </div>
               <div className="flex">
-                <button className="btn" onClick={ this.props.formSubmitted }>
+                {/* onClick={ this.props.formSubmitted } */}
+                <button className="btn" >
                   <span>SIGN NOW</span>
                 </button>
               </div>
