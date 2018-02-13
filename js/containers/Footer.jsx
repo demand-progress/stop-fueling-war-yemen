@@ -59,11 +59,23 @@ class Footer extends Component {
                               <a target="_blank">
                                   <img alt="Win Without War" src="images/winwithoutwar.jpg" />
                               </a>
+                            
+                              <a target="_blank">
+                                <img alt="Womens Action For New Directions" src="images/WANDLogo.gif" />
+                              </a>
+                              
+                              <a target="_blank">
+                                <img alt="World Beyond War" src="images/World Beyond War 300x150_preview.jpeg" />
+                              </a>
                               
                           </div>
                           <p style={{marginBottom: "50px"}}>Endorsing organizations:</p> 
                           <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor:"white"}}>
                           
+                              <a target="_blank">
+                                  <img alt="Code Pink" src="images/CP_logo_preview(1).jpeg" />
+                              </a>
+                            
                               <a target="_blank">
                                   <img alt="Credo" src="images/CREDO-logo_preview.png" />
                               </a>
@@ -74,6 +86,10 @@ class Footer extends Component {
                               
                               <a target="_blank">
                                   <img alt="Our Revolution" src="images/OR-logo_preview.png" />
+                              </a>
+                              
+                              <a target="_blank">
+                                  <img alt="United For Peace And Justice" src="images/utpj.png" />
                               </a>
                   
                               <a target="_blank">
