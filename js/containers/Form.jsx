@@ -35,8 +35,9 @@ class Form extends Component {
     
     render() {
         let form = null;
-  
-        if(this.state.submitted) {
+        let location = window.location.href.indexOf('email=call') !== -1
+        
+        if(location || this.state.submitted) {
           form = (
             < CallInitiate callMade={ this.callMade }/>
           )
