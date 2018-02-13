@@ -5270,7 +5270,9 @@
 	    key: 'render',
 	    value: function render() {
 	      var form = null;
-	      if (this.state.submitted) {
+	      var location = window.location.href.indexOf('email=call') !== -1;
+	
+	      if (location || this.state.submitted) {
 	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
 	      } else if (this.state.callMade) {
 	        form = _react2.default.createElement(_PhoneScript2.default, null);
