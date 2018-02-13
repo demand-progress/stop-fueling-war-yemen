@@ -12,9 +12,16 @@ class Form extends Component {
         this.state = getQueryVariables();
         this.state.submitted = false;
         this.state.callMade = false; 
+        this.state.emailAction = false; 
         
         this.callMade = this.callMade.bind(this);
         this.formSubmitted = this.formSubmitted.bind(this);
+    }
+    
+    componentWillMount () {
+      this.setState({
+        emailAction: window.location.href.indexOf('email=call') !== -1
+      })
     }
     
     callMade(evt) {
@@ -35,9 +42,8 @@ class Form extends Component {
     
     render() {
         let form = null;
-        let location = window.location.href.indexOf('email=call') !== -1
         
-        if(location || this.state.submitted) {
+        if(this.state.emailAction || this.state.submitted) {
           form = (
             < CallInitiate callMade={ this.callMade }/>
           )
