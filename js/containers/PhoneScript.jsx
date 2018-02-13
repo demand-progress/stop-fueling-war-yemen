@@ -7,8 +7,9 @@ class PhoneScriptForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            sent: false,
+        
+        this.state = { 
+            sent: false
          }
     }
     
@@ -46,6 +47,16 @@ class PhoneScriptForm extends Component {
         })
     }
     render() {
+      let button = null
+      if(this.setState.sent){
+        button = (
+          <button className="btn" >Thank You!</button>
+        )
+      } else {
+        button = (
+          <button className="btn" onClick={this.onClickSendFeedback.bind(this)} type="submit" name="submit">Send Feedback</button>
+        )
+      }
         return (
           <div>
               <form className="bftn-form call-action-form" action="#" method="get" >
