@@ -5241,8 +5241,8 @@
 	    var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 	
 	    _this.state = (0, _utils.getQueryVariables)();
-	    _this.state.submitted = true;
-	    _this.state.callMade = true;
+	    _this.state.submitted = false;
+	    _this.state.callMade = false;
 	
 	    _this.callMade = _this.callMade.bind(_this);
 	    _this.formSubmitted = _this.formSubmitted.bind(_this);
@@ -5270,7 +5270,6 @@
 	    key: 'render',
 	    value: function render() {
 	      var form = null;
-	
 	      if (this.state.submitted) {
 	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
 	      } else if (this.state.callMade) {

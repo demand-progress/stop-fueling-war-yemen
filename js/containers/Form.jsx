@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { CONF, URLS } from '../config';
-import { getQueryVariables } from '../utils';
+import React, { Component } from 'react'
+import { getQueryVariables } from '../utils'
 import PhoneScript from './PhoneScript.jsx'
 import CallInitiate from './CallInitiate.jsx'
 import ActionForm from './ActionForm.jsx'
