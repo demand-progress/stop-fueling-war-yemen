@@ -5336,7 +5336,8 @@
 	    actionKitPageShortName: 'stop-fueling-war-yemen',
 	    actionKitPageId: 2172,
 	    prettyCampaignName: 'Stop Fueling War in Yemen',
-	    callCampaign: 'stop-fueling-war-yemen'
+	    callCampaign: 'stop-fueling-war-yemen',
+	    callPowerId: 16
 	};
 	var URLS = {
 	    actionKit: 'https://act.demandprogress.org/act/',
@@ -5590,6 +5591,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _config = __webpack_require__(/*! ../config */ 41);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5621,7 +5624,8 @@
 	            }
 	
 	            var request = new XMLHttpRequest();
-	            var url = 'https://demandprogress.callpower.org/call/create?campaignId=16&userPhone=' + number;
+	            var url = 'https://demandprogress.callpower.org/call/create?campaignId=' + _config.CONF.callPowerId + '&userPhone=' + number;
+	            console.log(url);
 	
 	            var zip = void 0;
 	            try {
@@ -5761,61 +5765,63 @@
 	    value: function onSubmit(evt) {
 	      evt.preventDefault();
 	
-	      var form = evt.target;
-	      var emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-	
-	      var name = form.name;
-	      if (!name.value.trim()) {
-	        name.focus();
-	        alert('Please enter your name.');
-	        return;
-	      }
-	
-	      var email = form.email;
-	      if (!email.value.trim()) {
-	        email.focus();
-	        alert('Please enter your email.');
-	        return;
-	      } else if (!emailRegex.test(email.value.trim())) {
-	        email.focus();
-	        alert('Please enter a valid email.');
-	        return;
-	      }
-	
-	      var address1 = form.street;
-	      if (!address1.value.trim()) {
-	        address1.focus();
-	        alert("Please enter your address.");
-	        return;
-	      }
-	
-	      var zip = form.zip;
-	      if (!zip.value.trim()) {
-	        zip.focus();
-	        alert('Please enter your Zipcode.');
-	        return;
-	      } else if (zip.value.length < 5 || zip.value.length > 5) {
-	        zip.focus();
-	        alert('Please enter a valid Zipcode.');
-	        return;
-	      }
-	
-	      var fields = {
-	        'action_user_agent': navigator.userAgent,
-	        'country': 'United States',
-	        'email': email.value.trim(),
-	        'form_name': 'act-petition',
-	        'js': 1,
-	        'name': name.value.trim(),
-	        'address1': address1.value.trim(),
-	        'zip': zip.value.trim(),
-	        'opt_in': 1,
-	        'page': _config.CONF.actionKitPageShortName,
-	        'source': this.state.source || 'website',
-	        'want_progress': 1
-	      };
-	
-	      this.sendFormToActionKit(fields);
+	      // const form = evt.target;
+	      // const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+	      // const name = form.name;
+	      // const nameRegex = /^[A-Za-z '.-]+$/.test(name.value)
+	      // 
+	      // 
+	      // if (!name.value.trim() || !nameRegex) {
+	      //   name.focus();
+	      //   alert('Please enter your name.');
+	      //   return;
+	      // }
+	      // 
+	      // const email = form.email;
+	      // if (!email.value.trim()) {
+	      //   email.focus();
+	      //   alert('Please enter your email.');
+	      //   return;
+	      // } else if (!emailRegex.test(email.value.trim())) {
+	      //   email.focus();
+	      //   alert('Please enter a valid email.');
+	      //   return;
+	      // }
+	      // 
+	      // const address1 = form.street;
+	      // if (!address1.value.trim()) {
+	      //   address1.focus();
+	      //   alert("Please enter your address.");
+	      //   return;
+	      // }
+	      // 
+	      // const zip = form.zip;
+	      // if (!zip.value.trim()) {
+	      //   zip.focus();
+	      //   alert('Please enter your Zipcode.');
+	      //   return;
+	      // } else if (zip.value.length < 5 || zip.value.length > 5) {
+	      //   zip.focus();
+	      //   alert('Please enter a valid Zipcode.');
+	      //   return;
+	      // }
+	      // 
+	      // const fields = {
+	      //   'action_user_agent': navigator.userAgent,
+	      //   'country': 'United States',
+	      //   'email': email.value.trim(),
+	      //   'form_name': 'act-petition',
+	      //   'js': 1,
+	      //   'name': name.value.trim(),
+	      //   'address1': address1.value.trim(),
+	      //   'zip': zip.value.trim(),
+	      //   'opt_in': 1,
+	      //   'page': CONF.actionKitPageShortName,
+	      //   'source': this.state.source || 'website',
+	      //   'want_progress': 1
+	      // };
+	      // 
+	      // this.sendFormToActionKit(fields);
 	    }
 	  }, {
 	    key: 'sendFormToActionKit',
@@ -5842,7 +5848,7 @@
 	        form.appendChild(input);
 	      });
 	
-	      form.submit();
+	      // form.submit()
 	    }
 	  }, {
 	    key: 'render',
@@ -5889,7 +5895,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'flex' },
-	              _react2.default.createElement('input', { type: 'text', className: 'form-input', name: 'name', placeholder: 'Your Name' }),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-input', name: 'name', placeholder: 'Your Name', pattern: '[A-Za-z \'.-]+' }),
 	              _react2.default.createElement('input', { type: 'email', className: 'form-input', name: 'email', placeholder: 'Your Email' })
 	            ),
 	            _react2.default.createElement(
@@ -5903,7 +5909,7 @@
 	              { className: 'flex' },
 	              _react2.default.createElement(
 	                'button',
-	                { className: 'btn', onClick: this.props.formSubmitted },
+	                { className: 'btn' },
 	                _react2.default.createElement(
 	                  'span',
 	                  null,
