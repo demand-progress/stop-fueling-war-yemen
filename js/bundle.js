@@ -5883,7 +5883,7 @@
 	              { className: 'flex' },
 	              _react2.default.createElement(
 	                'button',
-	                { className: 'btn' },
+	                { className: 'btn', onClick: this.props.formSubmitted },
 	                _react2.default.createElement(
 	                  'span',
 	                  null,
