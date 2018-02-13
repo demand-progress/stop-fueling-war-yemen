@@ -5765,63 +5765,62 @@
 	    value: function onSubmit(evt) {
 	      evt.preventDefault();
 	
-	      // const form = evt.target;
-	      // const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-	      // const name = form.name;
-	      // const nameRegex = /^[A-Za-z '.-]+$/.test(name.value)
-	      // 
-	      // 
-	      // if (!name.value.trim() || !nameRegex) {
-	      //   name.focus();
-	      //   alert('Please enter your name.');
-	      //   return;
-	      // }
-	      // 
-	      // const email = form.email;
-	      // if (!email.value.trim()) {
-	      //   email.focus();
-	      //   alert('Please enter your email.');
-	      //   return;
-	      // } else if (!emailRegex.test(email.value.trim())) {
-	      //   email.focus();
-	      //   alert('Please enter a valid email.');
-	      //   return;
-	      // }
-	      // 
-	      // const address1 = form.street;
-	      // if (!address1.value.trim()) {
-	      //   address1.focus();
-	      //   alert("Please enter your address.");
-	      //   return;
-	      // }
-	      // 
-	      // const zip = form.zip;
-	      // if (!zip.value.trim()) {
-	      //   zip.focus();
-	      //   alert('Please enter your Zipcode.');
-	      //   return;
-	      // } else if (zip.value.length < 5 || zip.value.length > 5) {
-	      //   zip.focus();
-	      //   alert('Please enter a valid Zipcode.');
-	      //   return;
-	      // }
-	      // 
-	      // const fields = {
-	      //   'action_user_agent': navigator.userAgent,
-	      //   'country': 'United States',
-	      //   'email': email.value.trim(),
-	      //   'form_name': 'act-petition',
-	      //   'js': 1,
-	      //   'name': name.value.trim(),
-	      //   'address1': address1.value.trim(),
-	      //   'zip': zip.value.trim(),
-	      //   'opt_in': 1,
-	      //   'page': CONF.actionKitPageShortName,
-	      //   'source': this.state.source || 'website',
-	      //   'want_progress': 1
-	      // };
-	      // 
-	      // this.sendFormToActionKit(fields);
+	      var form = evt.target;
+	      var emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+	      var name = form.name;
+	      var nameRegex = /^[A-Za-z '.-]+$/.test(name.value);
+	
+	      if (!name.value.trim() || !nameRegex) {
+	        name.focus();
+	        alert('Please enter your name.');
+	        return;
+	      }
+	
+	      var email = form.email;
+	      if (!email.value.trim()) {
+	        email.focus();
+	        alert('Please enter your email.');
+	        return;
+	      } else if (!emailRegex.test(email.value.trim())) {
+	        email.focus();
+	        alert('Please enter a valid email.');
+	        return;
+	      }
+	
+	      var address1 = form.street;
+	      if (!address1.value.trim()) {
+	        address1.focus();
+	        alert("Please enter your address.");
+	        return;
+	      }
+	
+	      var zip = form.zip;
+	      if (!zip.value.trim()) {
+	        zip.focus();
+	        alert('Please enter your Zipcode.');
+	        return;
+	      } else if (zip.value.length < 5 || zip.value.length > 5) {
+	        zip.focus();
+	        alert('Please enter a valid Zipcode.');
+	        return;
+	      }
+	
+	      var fields = {
+	        'action_user_agent': navigator.userAgent,
+	        'country': 'United States',
+	        'email': email.value.trim(),
+	        'form_name': 'act-petition',
+	        'js': 1,
+	        'name': name.value.trim(),
+	        'address1': address1.value.trim(),
+	        'zip': zip.value.trim(),
+	        'opt_in': 1,
+	        'page': _config.CONF.actionKitPageShortName,
+	        'source': this.state.source || 'website',
+	        'want_progress': 1
+	      };
+	
+	      this.sendFormToActionKit(fields);
 	    }
 	  }, {
 	    key: 'sendFormToActionKit',
