@@ -122,8 +122,7 @@ class ActionForm extends Component {
                 <input type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
               </div>
               <div className="flex">
-                {/* onClick={ this.props.formSubmitted } */}
-                <button className="btn" >
+                <button className="btn" onClick={ this.props.formSubmitted } >
                   <span>SIGN NOW</span>
                 </button>
               </div>
