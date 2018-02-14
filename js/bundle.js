@@ -4921,6 +4921,11 @@
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "Demand Progress", src: "images/demand-progress.png" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Democracy for America", src: "images/DFA-Logo-bottom-white-400.png" })
 	                                ),
 	                                _react2.default.createElement(
@@ -5596,7 +5601,7 @@
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            'I am a constituent of Senator _____. Please support the Sanders-Lee resolution that would end American involvement in the war on Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop.'
+	            '"I am a constituent of Senator _____. Please support the Sanders-Lee resolution that would end American involvement in the war on Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop."'
 	        )
 	    );
 	};
@@ -5706,7 +5711,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'bftn-form call-action-form', style: { marginBottom: '-50px' } },
+	        { className: 'bftn-form call-action-form' },
 	        _react2.default.createElement(
 	          'h3',
 	          null,
@@ -5753,18 +5758,18 @@
 	                { href: 'http://callpower.org/', target: '_blank' },
 	                'Call Power'
 	              ),
-	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null)
+	            ),
+	            _react2.default.createElement(
+	              'strong',
+	              { style: { fontSize: '25px', marginTop: '-4px', color: 'white' } },
+	              'Or dial ',
 	              _react2.default.createElement(
-	                'p',
-	                { style: { marginTop: '-4px' } },
-	                'Or dial ',
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'tel:+18337867927' },
-	                  '833-786-7927'
-	                ),
-	                ' to connect.'
-	              )
+	                'a',
+	                { href: 'tel:+18337867927' },
+	                '833-786-7927'
+	              ),
+	              ' to connect.'
 	            )
 	          )
 	        )
