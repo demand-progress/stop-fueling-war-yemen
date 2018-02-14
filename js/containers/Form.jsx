@@ -45,13 +45,13 @@ class Form extends Component {
     render() {
         let form = null;
         
-        if(this.state.emailAction || this.state.submitted) {
-          form = (
-            < CallInitiate callMade={ this.callMade }/>
-          )
-        } else if(this.state.callMade){
+        if(this.state.callMade){
           form = ( 
             < PhoneScript />
+          )    
+        } else if(this.state.emailAction || this.state.submitted) {
+          form = (
+            < CallInitiate callMade={ this.callMade }/>
           )
         } else {
           form = (
