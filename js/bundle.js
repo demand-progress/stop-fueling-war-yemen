@@ -5301,7 +5301,7 @@
 	        this.setState({
 	          submitted: true
 	        });
-	      }.bind(this), 5000);
+	      }.bind(this), 8000);
 	    }
 	  }, {
 	    key: 'render',
