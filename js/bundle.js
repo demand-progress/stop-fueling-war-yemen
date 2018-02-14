@@ -5262,7 +5262,7 @@
 	
 	    _this.state = (0, _utils.getQueryVariables)();
 	    _this.state.submitted = false;
-	    _this.state.callMade = false;
+	    _this.state.callMade = true;
 	    _this.state.emailAction = false;
 	
 	    _this.callMade = _this.callMade.bind(_this);
@@ -5301,10 +5301,10 @@
 	    value: function render() {
 	      var form = null;
 	
-	      if (this.state.emailAction || this.state.submitted) {
-	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
-	      } else if (this.state.callMade) {
+	      if (this.state.callMade) {
 	        form = _react2.default.createElement(_PhoneScript2.default, null);
+	      } else if (this.state.emailAction || this.state.submitted) {
+	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
 	      } else {
 	        form = _react2.default.createElement(_ActionForm2.default, { formSubmitted: this.formSubmitted });
 	      }
@@ -5463,20 +5463,17 @@
 	                    _react2.default.createElement(
 	                        'h3',
 	                        null,
-	                        'WE\u2019RE CALLING YOU NOW.'
+	                        'We\'re calling you now.'
 	                    ),
 	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { style: { color: 'white', lineHeight: 1.5 } },
-	                        _react2.default.createElement(
-	                            'strong',
-	                            { style: { fontSize: "20px" } },
-	                            'After the conversation, you can press * and we\u2019ll connect you to the next office.'
-	                        )
+	                        'We will connect you to the offices of your senators. You can tell them:',
+	                        _react2.default.createElement(_PhoneScriptText2.default, null),
+	                        'After each conversation, you can press * and we\u2019ll connect you to the next office.'
 	                    ),
-	                    _react2.default.createElement(_PhoneScriptText2.default, null),
 	                    _react2.default.createElement(
 	                        'h4',
 	                        null,
@@ -5599,16 +5596,7 @@
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            _react2.default.createElement(
-	                'strong',
-	                null,
-	                'We will connect you the offices of your senators.  You can tell them:'
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'p',
-	            null,
-	            'I am a constituent of Senator _____.  Please support the Sanders-Lee resolution that would end American involvement in the war on Yemen.  American military aid is fueling a humanitarian crisis, and it is time for this to stop.'
+	            'I am a constituent of Senator _____. Please support the Sanders-Lee resolution that would end American involvement in the war on Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop.'
 	        )
 	    );
 	};
