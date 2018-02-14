@@ -5067,7 +5067,7 @@
 	                                ),
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { className: "facebook", href: "https://www.facebook.com/sharer.php?u=https://www.savethenetfromtrump.com/", target: "_blank" },
+	                                    { className: "facebook", href: "https://www.facebook.com/sharer.php?u=https://stopthewar.us/", target: "_blank" },
 	                                    _react2.default.createElement("img", { src: "images/facebook_white.svg" }),
 	                                    _react2.default.createElement(
 	                                        "span",
