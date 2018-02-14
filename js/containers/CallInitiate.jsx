@@ -5,23 +5,28 @@ class CallInitiate extends Component {
 
     constructor(props) {
         super(props);
+        
+        this.state = {
+          calling: false
+        }
+        
+        this.onPhoneFormSubmit = this.onPhoneFormSubmit.bind(this)
+        this.click = this.click.bind(this)
     }
     
     onPhoneFormSubmit(e) {
         e.preventDefault();
-
-        const phoneField = e.target.fieldPhone;       
+        const phoneField = document.getElementById('fieldPhone');      
         const number = phoneField.value.replace(/[^\d]/g, '');
 
         if (number.length !== 10) {
             phoneField.focus();
             return alert('Please enter your 10 digit phone number.');
         }
-
+        
         const request = new XMLHttpRequest();
         let url = `https://demandprogress.callpower.org/call/create?campaignId=${CONF.callPowerId}&userPhone=${number}`;
-        console.log(url); 
-
+        
         let zip
         try {
             if ('zip' in sessionStorage) {
@@ -30,15 +35,30 @@ class CallInitiate extends Component {
         } catch (err) {
             // Oh well
         }
-
-        // this.props.changeForm('script');
-  
+      
         request.open('POST', url, true);
-        request.send();
-        
+        request.send();  
     }
-
+    
+    click(e){
+      this.onPhoneFormSubmit(e)
+      this.props.callMade(e)
+      this.setState({
+        calling: true
+      })
+    }
+    
     render() {
+      let button = null
+      
+      if(this.state.calling){
+        button = (<button className="btn" onClick={ this.click }>CALLING...
+        </button>)
+      } else {
+        button= (<button className="btn" onClick={ this.click }>CALL CONGRESS
+          <img src="images/phone.svg" />
+        </button>)
+      }
         return (
           <div className="bftn-form call-action-form">
             <h3>Thanks for signing. <br/> Now, could you make a call?</h3>
@@ -54,11 +74,9 @@ class CallInitiate extends Component {
                 Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.
               </p> */}
               <div className="phone-form">
-                <form onSubmit={ this.onPhoneFormSubmit.bind(this)}>
+                <form >
                   <input style={{border:'1px solid black'}} placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
-                  <button className="btn" onClick={ this.props.callMade }>CALL CONGRESS
-                      <img src="images/phone.svg" />
-                  </button>
+                  {button}
                 </form>
                 <div className="privacy" style={{fontSize:"12px", fontFamily:"inherit", fontStyle:"italic", textAlign:"center", padding:"10px 0 20px", lineHeight:"1.5"}}>
                     This tool uses <a href="http://callpower.org/" target="_blank">Call Power</a>
