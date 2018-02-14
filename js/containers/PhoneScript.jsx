@@ -11,6 +11,8 @@ class PhoneScriptForm extends Component {
         this.state = { 
             sent: false
          }
+         
+         this.onClickSendFeedback = this.onClickSendFeedback.bind(this)
     }
     
     onClickSendFeedback(e) {
@@ -54,7 +56,7 @@ class PhoneScriptForm extends Component {
         )
       } else {
         button = (
-          <button className="btn" onClick={this.onClickSendFeedback.bind(this)} type="submit" name="submit">Send Feedback</button>
+          <button className="btn" onClick={this.onClickSendFeedback} type="submit" name="submit">Send Feedback</button>
         )
       }
         return (

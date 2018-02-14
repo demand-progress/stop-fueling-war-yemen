@@ -7,14 +7,23 @@ class ActionForm extends Component {
     constructor(props) {
         super(props);
         this.state = getQueryVariables();
+        this.state = {
+          sent: false
+        }
+         
+        this.onSubmit = this.onSubmit.bind(this)
+        this.click = this.click.bind(this)
     }
     
     onSubmit(evt) {
       evt.preventDefault();
       
-      const form = evt.target;
+      const name = document.getElementById('name');   
+      const email = document.getElementById('email');
+      const address1 = document.getElementById('street');
+      const zip = document.getElementById('zip');   
+
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-      const name = form.name;
       const nameRegex = /^[A-Za-z '.-]+$/.test(name.value)
       
       
@@ -24,7 +33,7 @@ class ActionForm extends Component {
         return;
       }
       
-      const email = form.email;
+      // const email = form.email;
       if (!email.value.trim()) {
         email.focus();
         alert('Please enter your email.');
@@ -35,14 +44,14 @@ class ActionForm extends Component {
         return;
       }
       
-      const address1 = form.street;
+      // const address1 = form.street;
       if (!address1.value.trim()) {
         address1.focus();
         alert("Please enter your address.");
         return;
       }
       
-      const zip = form.zip;
+      // const zip = form.zip;
       if (!zip.value.trim()) {
         zip.focus();
         alert('Please enter your Zipcode.');
@@ -93,14 +102,39 @@ class ActionForm extends Component {
         input.value = fields[key];
         form.appendChild(input);
       });
+  
+      form.submit()
       
-      // form.submit()
+    
+    }
+    
+    click(e){
+      this.onSubmit(e)
+      this.setState({
+        sent: true
+      })
+      this.props.formSubmitted(e)
     }
     
     render() {
+      let button = null
+      
+      if(this.state.sent){
+        button = (
+          <button className="btn">
+            <span>Sending...</span>
+          </button>
+        )
+      } else {
+        button = (
+          <button className="btn" onClick={ this.click } >
+            <span>SIGN NOW</span>
+          </button>
+        )
+      }
+      
       return(
-        <div>
-          <form className="bftn-form call-action-form" onSubmit={ this.onSubmit.bind(this) }>
+        <div className="bftn-form call-action-form">
             <h3>Tell Congress: Stop Fueling War in Yemen</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
@@ -112,23 +146,22 @@ class ActionForm extends Component {
                 <br/><br/>
                 <div>Add your name to send a message (below) to Congress:</div>
             </div>
-            <div id="signThePetition">
+            <div >
+              <form>
               <div className="flex">
-                <input type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
-                <input type="email" className="form-input" name="email" placeholder="Your Email" />
+                <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
+                <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
               </div>
               <div className="flex">
-                <input type="text" className="form-input" name="street" placeholder="Street Address" />
-                <input type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
+                <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
+                <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
               </div>
               <div className="flex">
-                <button className="btn" onClick={ this.props.formSubmitted } >
-                  <span>SIGN NOW</span>
-                </button>
+                {button}
               </div>
-            </div>
-            <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
-          </form>
+            </form>
+           </div>
+              <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
           <p style={{color: 'white', textAlign: 'center'}}>
               <h4>Here's the language that will be sent to Congress:</h4>
           </p>

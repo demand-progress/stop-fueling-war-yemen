@@ -36,9 +36,11 @@ class Form extends Component {
     
     formSubmitted(evt) {
       evt.preventDefault();
-      this.setState({
-        submitted: true
-      })
+      setTimeout(function() { 
+        this.setState({
+          submitted: true
+        })
+        }.bind(this), 5000)
     }
     
     
