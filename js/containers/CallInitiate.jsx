@@ -52,7 +52,7 @@ class CallInitiate extends Component {
       let button = null
       
       if(this.state.calling){
-        button = (<button className="btn" onClick={ this.click }>CALLING...
+        button = (<button className="btn">CALLING...
         </button>)
       } else {
         button= (<button className="btn" onClick={ this.click }>CALL CONGRESS
