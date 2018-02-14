@@ -60,7 +60,7 @@ class CallInitiate extends Component {
         </button>)
       }
         return (
-          <div className="bftn-form call-action-form" style={{marginBottom:'-50px'}}>
+          <div className="bftn-form call-action-form">
             <h3>Thanks for signing. <br/>Now, could you make a call to your senators?</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
@@ -81,8 +81,10 @@ class CallInitiate extends Component {
                 <div className="privacy" style={{fontSize:"12px", fontFamily:"inherit", fontStyle:"italic", textAlign:"center", padding:"10px 0 20px", lineHeight:"1.5"}}>
                     This tool uses <a href="http://callpower.org/" target="_blank">Call Power</a>
                     <br/>
-                    <p style={{marginTop:'-4px'}}>Or dial <a href="tel:+18337867927">833-786-7927</a> to connect.</p>
                 </div>
+                <strong style={{ fontSize: '25px', marginTop:'-4px', color: 'white' }}>
+                  Or dial <a href="tel:+18337867927">833-786-7927</a> to connect.
+                </strong>
               </div>
             </article>
           </div>
