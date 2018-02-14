@@ -60,8 +60,8 @@ class CallInitiate extends Component {
         </button>)
       }
         return (
-          <div className="bftn-form call-action-form">
-            <h3>Thanks for signing. <br/> Now, could you make a call?</h3>
+          <div className="bftn-form call-action-form" style={{marginBottom:'-50px'}}>
+            <h3>Thanks for signing. <br/>Now, could you make a call to your senators?</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
               <strong style={{ fontSize: "25px" }}>
@@ -70,9 +70,9 @@ class CallInitiate extends Component {
               <br/><br/>
             </div>
             <article>
-              {/* <p style={{fontSize: '20px', fontWeight: 'bold', margin:'0 0 20px 0'}}>
-                Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.
-              </p> */}
+              <p style={{margin:'0 0 20px 0'}}>
+                Just enter your number and click “call”.  We’ll call you, give you a script of what you can say, and connect you to your senators.
+              </p>
               <div className="phone-form">
                 <form >
                   <input style={{border:'1px solid black'}} placeholder="Your Phone Number" id="fieldPhone" ref="field-phone" className="phone" name="phone" autoComplete="on" pattern="[\d\(\)\-\+ ]*" autoFocus />
@@ -81,12 +81,9 @@ class CallInitiate extends Component {
                 <div className="privacy" style={{fontSize:"12px", fontFamily:"inherit", fontStyle:"italic", textAlign:"center", padding:"10px 0 20px", lineHeight:"1.5"}}>
                     This tool uses <a href="http://callpower.org/" target="_blank">Call Power</a>
                     <br/>
-                    Or dial <a href="tel:+18337867927">833-786-7927</a> to connect.
+                    <p style={{marginTop:'-4px'}}>Or dial <a href="tel:+18337867927">833-786-7927</a> to connect.</p>
                 </div>
               </div>
-                Just enter your number and click “call”
-                <br/><br/>
-                We’ll connect you with members of Congress and key party leaders, and give you a script of what you can say.
             </article>
           </div>
         )
