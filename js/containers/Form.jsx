@@ -26,10 +26,12 @@ class Form extends Component {
     
     callMade(evt) {
       evt.preventDefault();
-      this.setState({
-        submitted: false,
-        callMade: true
-      })
+      setTimeout(function() { 
+        this.setState({
+            submitted: false,
+            callMade: true
+          }) 
+        }.bind(this), 5000)  
     }
     
     formSubmitted(evt) {

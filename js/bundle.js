@@ -5281,10 +5281,12 @@
 	    key: 'callMade',
 	    value: function callMade(evt) {
 	      evt.preventDefault();
-	      this.setState({
-	        submitted: false,
-	        callMade: true
-	      });
+	      setTimeout(function () {
+	        this.setState({
+	          submitted: false,
+	          callMade: true
+	        });
+	      }.bind(this), 5000);
 	    }
 	  }, {
 	    key: 'formSubmitted',
@@ -5623,7 +5625,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -5643,117 +5645,141 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var CallInitiate = function (_Component) {
-	    _inherits(CallInitiate, _Component);
+	  _inherits(CallInitiate, _Component);
 	
-	    function CallInitiate(props) {
-	        _classCallCheck(this, CallInitiate);
+	  function CallInitiate(props) {
+	    _classCallCheck(this, CallInitiate);
 	
-	        return _possibleConstructorReturn(this, (CallInitiate.__proto__ || Object.getPrototypeOf(CallInitiate)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (CallInitiate.__proto__ || Object.getPrototypeOf(CallInitiate)).call(this, props));
+	
+	    _this.state = {
+	      calling: false
+	    };
+	
+	    _this.onPhoneFormSubmit = _this.onPhoneFormSubmit.bind(_this);
+	    _this.click = _this.click.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(CallInitiate, [{
+	    key: 'onPhoneFormSubmit',
+	    value: function onPhoneFormSubmit(e) {
+	      e.preventDefault();
+	      var phoneField = document.getElementById('fieldPhone');
+	      var number = phoneField.value.replace(/[^\d]/g, '');
+	
+	      if (number.length !== 10) {
+	        phoneField.focus();
+	        return alert('Please enter your 10 digit phone number.');
+	      }
+	
+	      var request = new XMLHttpRequest();
+	      var url = 'https://demandprogress.callpower.org/call/create?campaignId=' + _config.CONF.callPowerId + '&userPhone=' + number;
+	
+	      var zip = void 0;
+	      try {
+	        if ('zip' in sessionStorage) {
+	          zip = '' + sessionStorage.zip;
+	        }
+	      } catch (err) {
+	        // Oh well
+	      }
+	
+	      request.open('POST', url, true);
+	      request.send();
 	    }
+	  }, {
+	    key: 'click',
+	    value: function click(e) {
+	      this.onPhoneFormSubmit(e);
+	      this.props.callMade(e);
+	      this.setState({
+	        calling: true
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var button = null;
 	
-	    _createClass(CallInitiate, [{
-	        key: 'onPhoneFormSubmit',
-	        value: function onPhoneFormSubmit(e) {
-	            e.preventDefault();
+	      if (this.state.calling) {
+	        button = _react2.default.createElement(
+	          'button',
+	          { className: 'btn', onClick: this.click },
+	          'CALLING...'
+	        );
+	      } else {
+	        button = _react2.default.createElement(
+	          'button',
+	          { className: 'btn', onClick: this.click },
+	          'CALL CONGRESS',
+	          _react2.default.createElement('img', { src: 'images/phone.svg' })
+	        );
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'bftn-form call-action-form' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Thanks for signing. ',
+	          _react2.default.createElement('br', null),
+	          ' Now, could you make a call?'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'div',
+	          { style: { color: 'white', lineHeight: 1.5 } },
+	          _react2.default.createElement(
+	            'strong',
+	            { style: { fontSize: "25px" } },
+	            'Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement(
+	          'article',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'phone-form' },
+	            _react2.default.createElement(
+	              'form',
+	              null,
+	              _react2.default.createElement('input', { style: { border: '1px solid black' }, placeholder: 'Your Phone Number', id: 'fieldPhone', ref: 'field-phone', className: 'phone', name: 'phone', autoComplete: 'on', pattern: '[\\d\\(\\)\\-\\+ ]*', autoFocus: true }),
+	              button
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'privacy', style: { fontSize: "12px", fontFamily: "inherit", fontStyle: "italic", textAlign: "center", padding: "10px 0 20px", lineHeight: "1.5" } },
+	              'This tool uses ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'http://callpower.org/', target: '_blank' },
+	                'Call Power'
+	              ),
+	              _react2.default.createElement('br', null),
+	              'Or dial ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'tel:+18337867927' },
+	                '833-786-7927'
+	              ),
+	              ' to connect.'
+	            )
+	          ),
+	          'Just enter your number and click \u201Ccall\u201D',
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('br', null),
+	          'We\u2019ll connect you with members of Congress and key party leaders, and give you a script of what you can say.'
+	        )
+	      );
+	    }
+	  }]);
 	
-	            var phoneField = e.target.fieldPhone;
-	            var number = phoneField.value.replace(/[^\d]/g, '');
-	
-	            if (number.length !== 10) {
-	                phoneField.focus();
-	                return alert('Please enter your 10 digit phone number.');
-	            }
-	
-	            var request = new XMLHttpRequest();
-	            var url = 'https://demandprogress.callpower.org/call/create?campaignId=' + _config.CONF.callPowerId + '&userPhone=' + number;
-	            console.log(url);
-	
-	            var zip = void 0;
-	            try {
-	                if ('zip' in sessionStorage) {
-	                    zip = '' + sessionStorage.zip;
-	                }
-	            } catch (err) {}
-	            // Oh well
-	
-	
-	            // this.props.changeForm('script');
-	
-	            request.open('POST', url, true);
-	            request.send();
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'bftn-form call-action-form' },
-	                _react2.default.createElement(
-	                    'h3',
-	                    null,
-	                    'Thanks for signing. ',
-	                    _react2.default.createElement('br', null),
-	                    ' Now, could you make a call?'
-	                ),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'div',
-	                    { style: { color: 'white', lineHeight: 1.5 } },
-	                    _react2.default.createElement(
-	                        'strong',
-	                        { style: { fontSize: "25px" } },
-	                        'Make a call to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
-	                    ),
-	                    _react2.default.createElement('br', null),
-	                    _react2.default.createElement('br', null)
-	                ),
-	                _react2.default.createElement(
-	                    'article',
-	                    null,
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'phone-form' },
-	                        _react2.default.createElement(
-	                            'form',
-	                            { onSubmit: this.onPhoneFormSubmit.bind(this) },
-	                            _react2.default.createElement('input', { style: { border: '1px solid black' }, placeholder: 'Your Phone Number', id: 'fieldPhone', ref: 'field-phone', className: 'phone', name: 'phone', autoComplete: 'on', pattern: '[\\d\\(\\)\\-\\+ ]*', autoFocus: true }),
-	                            _react2.default.createElement(
-	                                'button',
-	                                { className: 'btn', onClick: this.props.callMade },
-	                                'CALL CONGRESS',
-	                                _react2.default.createElement('img', { src: 'images/phone.svg' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'privacy', style: { fontSize: "12px", fontFamily: "inherit", fontStyle: "italic", textAlign: "center", padding: "10px 0 20px", lineHeight: "1.5" } },
-	                            'This tool uses ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'http://callpower.org/', target: '_blank' },
-	                                'Call Power'
-	                            ),
-	                            _react2.default.createElement('br', null),
-	                            'Or dial ',
-	                            _react2.default.createElement(
-	                                'a',
-	                                { href: 'tel:+18337867927' },
-	                                '833-786-7927'
-	                            ),
-	                            ' to connect.'
-	                        )
-	                    ),
-	                    'Just enter your number and click \u201Ccall\u201D',
-	                    _react2.default.createElement('br', null),
-	                    _react2.default.createElement('br', null),
-	                    'We\u2019ll connect you with members of Congress and key party leaders, and give you a script of what you can say.'
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return CallInitiate;
+	  return CallInitiate;
 	}(_react.Component);
 	
 	exports.default = CallInitiate;
