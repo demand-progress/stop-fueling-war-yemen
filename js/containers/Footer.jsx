@@ -25,6 +25,10 @@ class Footer extends Component {
                               </a>
                               
                               <a target="_blank">
+                                  <img alt="Demand Progress" src="images/demand-progress.png" />
+                              </a>
+                              
+                              <a target="_blank">
                                   <img alt="Democracy for America" src="images/DFA-Logo-bottom-white-400.png" />
                               </a>
                               
