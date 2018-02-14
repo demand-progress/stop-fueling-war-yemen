@@ -5718,13 +5718,13 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'bftn-form call-action-form' },
+	        { className: 'bftn-form call-action-form', style: { marginBottom: '-50px' } },
 	        _react2.default.createElement(
 	          'h3',
 	          null,
 	          'Thanks for signing. ',
 	          _react2.default.createElement('br', null),
-	          ' Now, could you make a call?'
+	          'Now, could you make a call to your senators?'
 	        ),
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement('br', null),
@@ -5742,6 +5742,11 @@
 	        _react2.default.createElement(
 	          'article',
 	          null,
+	          _react2.default.createElement(
+	            'p',
+	            { style: { margin: '0 0 20px 0' } },
+	            'Just enter your number and click \u201Ccall\u201D.  We\u2019ll call you, give you a script of what you can say, and connect you to your senators.'
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'phone-form' },
@@ -5761,19 +5766,19 @@
 	                'Call Power'
 	              ),
 	              _react2.default.createElement('br', null),
-	              'Or dial ',
 	              _react2.default.createElement(
-	                'a',
-	                { href: 'tel:+18337867927' },
-	                '833-786-7927'
-	              ),
-	              ' to connect.'
+	                'p',
+	                { style: { marginTop: '-4px' } },
+	                'Or dial ',
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'tel:+18337867927' },
+	                  '833-786-7927'
+	                ),
+	                ' to connect.'
+	              )
 	            )
-	          ),
-	          'Just enter your number and click \u201Ccall\u201D',
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('br', null),
-	          'We\u2019ll connect you with members of Congress and key party leaders, and give you a script of what you can say.'
+	          )
 	        )
 	      );
 	    }
