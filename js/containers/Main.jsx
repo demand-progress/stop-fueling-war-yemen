@@ -7,8 +7,8 @@ class Main extends Component {
         return (
           <div className="unit">
             <div className="hero" id="bftn-action-form">
-                <div className="">
-                    <div>
+                <div>
+                    <div id="signThePetition">
                         <Form />
                     </div>
                 </div>

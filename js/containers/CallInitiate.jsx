@@ -60,7 +60,7 @@ class CallInitiate extends Component {
         </button>)
       }
         return (
-          <div className="bftn-form call-action-form">
+          <div className="bftn-form call-action-form" id="signThePetition">
             <h3>Thanks for signing. <br/>Now, could you make a call to your senators?</h3>
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
@@ -83,7 +83,7 @@ class CallInitiate extends Component {
                     <br/>
                 </div>
                 <strong style={{ fontSize: '25px', marginTop:'-4px', color: 'white' }}>
-                  Or dial <a href="tel:+18337867927">833-786-7927</a> to connect.
+                  Or dial <a href="tel:+12028998938">202-899-8938</a> to connect.
                 </strong>
               </div>
             </article>
