@@ -7,10 +7,8 @@ class ActionForm extends Component {
     constructor(props) {
         super(props);
         this.state = getQueryVariables();
-        this.state = {
-          sent: false
-        }
-         
+        this.state.sent = false;
+      
         this.onSubmit = this.onSubmit.bind(this)
         this.click = this.click.bind(this)
     }
@@ -73,11 +71,10 @@ class ActionForm extends Component {
         'zip': zip.value.trim(),
         'opt_in': 1,
         'page': CONF.actionKitPageShortName,
-        'source': this.state.source || 'website',
-        'want_progress': 1
+        'source': this.state.source || 'website'
       };
       
-      this.sendFormToActionKit(fields);
+       this.sendFormToActionKit(fields);
     }
     
     sendFormToActionKit(fields) {
@@ -103,9 +100,7 @@ class ActionForm extends Component {
         form.appendChild(input);
       });
   
-      form.submit()
-      
-    
+      form.submit()  
     }
     
     click(e){

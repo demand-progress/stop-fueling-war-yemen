@@ -5826,9 +5826,7 @@
 	    var _this = _possibleConstructorReturn(this, (ActionForm.__proto__ || Object.getPrototypeOf(ActionForm)).call(this, props));
 	
 	    _this.state = (0, _utils.getQueryVariables)();
-	    _this.state = {
-	      sent: false
-	    };
+	    _this.state.sent = false;
 	
 	    _this.onSubmit = _this.onSubmit.bind(_this);
 	    _this.click = _this.click.bind(_this);
@@ -5894,8 +5892,7 @@
 	        'zip': zip.value.trim(),
 	        'opt_in': 1,
 	        'page': _config.CONF.actionKitPageShortName,
-	        'source': this.state.source || 'website',
-	        'want_progress': 1
+	        'source': this.state.source || 'website'
 	      };
 	
 	      this.sendFormToActionKit(fields);
