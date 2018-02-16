@@ -19,8 +19,8 @@ import App from './containers/App.jsx'
 //need to change back to no include Route 
 //only need to send up both components to app 
 ReactDOM.render((
-     <div>
-       < App />
+     <div style={{textAlign:'center', fontSize:'30px', paddingTop: '20%'}}>
+       Coming Soon...
      </div>
      ),
      document.getElementById('root')
