@@ -1757,9 +1757,13 @@ template {
     opacity: 0;
 }
 
-div#video {
+#video {
+    width: 100%;
+    height: auto;
     display:flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; 
 }
 
 @media screen and (max-width: 600px) {
