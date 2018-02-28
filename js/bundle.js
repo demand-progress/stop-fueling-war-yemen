@@ -5158,11 +5158,6 @@
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'unit' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            { style: { color: 'white', textAlign: 'center' } },
-	                            'Mark Ruffalo explains the crisis in Yemen:'
-	                        ),
 	                        _react2.default.createElement(_Video2.default, null),
 	                        _react2.default.createElement(
 	                            'h4',
@@ -6072,7 +6067,7 @@
   \*********************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -6094,9 +6089,14 @@
 	
 	var Video = function Video() {
 	    return _react2.default.createElement(
-	        "div",
-	        { id: "video" },
-	        _react2.default.createElement("iframe", { width: "560", height: "315", src: "https://www.youtube.com/embed/WaQewDoipQQ", frameBorder: "0", allow: "autoplay; encrypted-media", allowFullScreen: true })
+	        'div',
+	        { id: 'video' },
+	        _react2.default.createElement(
+	            'h4',
+	            { style: { color: 'white' } },
+	            'Mark Ruffalo explains the crisis in Yemen:'
+	        ),
+	        _react2.default.createElement('iframe', { width: '560', height: '315', src: 'https://www.youtube.com/embed/WaQewDoipQQ', frameBorder: '0', allow: 'autoplay; encrypted-media', allowFullScreen: true })
 	    );
 	};
 	
