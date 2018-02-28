@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getQueryVariables } from '../utils'
-import { CONF, URLS } from '../config'
+
 
 class ActionForm extends Component {
 
@@ -9,107 +9,18 @@ class ActionForm extends Component {
         this.state = getQueryVariables();
         this.state.sent = false;
       
-        this.onSubmit = this.onSubmit.bind(this)
         this.click = this.click.bind(this)
-    }
-    
-    onSubmit(evt) {
-      evt.preventDefault();
-      
-      const name = document.getElementById('name');   
-      const email = document.getElementById('email');
-      const address1 = document.getElementById('street');
-      const zip = document.getElementById('zip');   
-
-      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-      const nameRegex = /^[A-Za-z '.-]+$/.test(name.value)
-      
-      
-      if (!name.value.trim() || !nameRegex) {
-        name.focus();
-        alert('Please enter your name.');
-        return;
-      }
-      
-      // const email = form.email;
-      if (!email.value.trim()) {
-        email.focus();
-        alert('Please enter your email.');
-        return;
-      } else if (!emailRegex.test(email.value.trim())) {
-        email.focus();
-        alert('Please enter a valid email.');
-        return;
-      }
-      
-      // const address1 = form.street;
-      if (!address1.value.trim()) {
-        address1.focus();
-        alert("Please enter your address.");
-        return;
-      }
-      
-      // const zip = form.zip;
-      if (!zip.value.trim()) {
-        zip.focus();
-        alert('Please enter your Zipcode.');
-        return;
-      } else if (zip.value.length < 5 || zip.value.length > 5) {
-        zip.focus();
-        alert('Please enter a valid Zipcode.');
-        return;
-      }
-      
-      const fields = {
-        'action_user_agent': navigator.userAgent,
-        'country': 'United States',
-        'email': email.value.trim(),
-        'form_name': 'act-petition',
-        'js': 1,
-        'name': name.value.trim(),
-        'address1': address1.value.trim(),
-        'zip': zip.value.trim(),
-        'opt_in': 1,
-        'page': CONF.actionKitPageShortName,
-        'source': this.state.source || 'website'
-      };
-      
-       this.sendFormToActionKit(fields);
-    }
-    
-    sendFormToActionKit(fields) {
-      // iFrame
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.setAttribute('name', 'actionkit-iframe');
-      document.body.appendChild(iframe);
-      
-      // Form
-      const form = document.createElement('form');
-      form.style.display = 'none';
-      form.setAttribute('action', URLS.actionKit);
-      form.setAttribute('method', 'post');
-      form.setAttribute('target', 'actionkit-iframe');
-      document.body.appendChild(form);
-      
-      Object.keys(fields).forEach(function(key) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = fields[key];
-        form.appendChild(input);
-      });
-  
-      form.submit()  
-    }
+    } 
     
     click(e){
-      this.onSubmit(e)
+      const processed = this.props.onSubmit(e) || false
+     if(processed){
       this.setState({
         sent: true
       })
       this.props.formSubmitted(e)
-    }
+       }
+     }
     
     render() {
       let button = null
@@ -144,12 +55,12 @@ class ActionForm extends Component {
             <div >
               <form>
               <div className="flex">
-                <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+"/>
-                <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" />
+                <input id="name" type="text" className="form-input" name="name" placeholder="Your Name" pattern="[A-Za-z '.-]+" required/>
+                <input id="email" type="email" className="form-input" name="email" placeholder="Your Email" required/>
               </div>
               <div className="flex">
-                <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" />
-                <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
+                <input id="street" type="text" className="form-input" name="street" placeholder="Street Address" required/>
+                <input id="zip" type="text" className="form-input" name="zip" placeholder="Your Zipcode" required/>
               </div>
               <div className="flex">
                 {button}
