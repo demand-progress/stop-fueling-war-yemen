@@ -23,6 +23,10 @@ class Form extends Component {
         emailAction: window.location.href.indexOf('email=call') !== -1
       })
     }
+
+    componentDidMount () {
+      window.scrollTo(0, 0)
+    }
     
     callMade(evt) {
       evt.preventDefault();
