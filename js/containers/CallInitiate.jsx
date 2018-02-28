@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { CONF } from '../config'
+import { getQueryVariables } from '../utils'
 
 class CallInitiate extends Component {
 
     constructor(props) {
         super(props);
-        
-        this.state = {
-          calling: false
-        }
-        
+        this.state = getQueryVariables()
+        this.state.calling = false
+        this.phoneNumber = null
         this.onPhoneFormSubmit = this.onPhoneFormSubmit.bind(this)
         this.click = this.click.bind(this)
     }
@@ -18,12 +17,16 @@ class CallInitiate extends Component {
         e.preventDefault();
         const phoneField = document.getElementById('fieldPhone');      
         const number = phoneField.value.replace(/[^\d]/g, '');
-
+       
         if (number.length !== 10) {
             phoneField.focus();
             return alert('Please enter your 10 digit phone number.');
+        } else {
+          this.setState({
+            phoneNumber: number
+          })
         }
-        
+       
         const request = new XMLHttpRequest();
         let url = `https://demandprogress.callpower.org/call/create?campaignId=${CONF.callPowerId}&userPhone=${number}`;
         
@@ -35,9 +38,59 @@ class CallInitiate extends Component {
         } catch (err) {
             // Oh well
         }
-      
+
+       
         request.open('POST', url, true);
-        request.send();  
+        request.send(); 
+        const self = this
+        const onSubmit= function(evt){
+          evt.preventDefault();
+
+          const sendFormToActionKit= function(fields){
+            // iFrame
+            
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.setAttribute('name', 'actionkit-iframe');
+            document.body.appendChild(iframe);
+            
+            // Form
+            const form = document.createElement('form');
+            form.style.display = 'none';
+            form.setAttribute('action', 'https://act.demandprogress.org/act/');
+            form.setAttribute('method', 'post');
+            form.setAttribute('target', 'actionkit-iframe');
+            document.body.appendChild(form);
+            
+            Object.keys(fields).forEach(function(key) {
+              const input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = key;
+              input.value = fields[key];
+              form.appendChild(input);
+            });
+        
+            form.submit()  
+          }
+
+          const fields = {
+            'action_user_agent': navigator.userAgent,
+            'country': 'United States',
+            'email': self.props.email,
+            'form_name': 'act-call',
+            'js': 1,
+            'name': self.props.name,
+            'phone': self.state.phoneNumber,
+            'zip': self.props.zip,
+            'opt_in': 1,
+            'page': 'Yemen',
+            'source': self.state.source || 'website'
+          };
+          
+          sendFormToActionKit(fields);
+        }
+
+       onSubmit(e)
     }
     
     click(e){
