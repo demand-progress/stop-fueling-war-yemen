@@ -4911,11 +4911,6 @@
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
-	                                    _react2.default.createElement("img", { alt: "Credo", src: "images/CREDO-logo_preview.png" })
-	                                ),
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Daily Kos", src: "images/DailyKosLogo.png" })
 	                                ),
 	                                _react2.default.createElement(
@@ -5271,8 +5266,8 @@
 	    var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 	
 	    _this.state = (0, _utils.getQueryVariables)();
-	    _this.state.submitted = true;
-	    _this.state.callMade = true;
+	    _this.state.submitted = false;
+	    _this.state.callMade = false;
 	    _this.state.emailAction = false;
 	
 	    _this.callMade = _this.callMade.bind(_this);
@@ -5486,7 +5481,15 @@
 	                        { style: { color: 'white', lineHeight: 1.5 } },
 	                        'We will connect you to the offices of your senators. You can tell them:',
 	                        _react2.default.createElement(_PhoneScriptText2.default, null),
-	                        'After each conversation, you can press * and we\u2019ll connect you to the next office.'
+	                        'After each conversation, you can press * and we\u2019ll connect you to the next office.',
+	                        _react2.default.createElement('br', null),
+	                        'Or dial ',
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: 'tel:+12028998938' },
+	                            '202-899-8938'
+	                        ),
+	                        ' to connect.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'h4',
