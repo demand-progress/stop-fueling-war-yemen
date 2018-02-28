@@ -43,7 +43,7 @@ class PhoneScriptForm extends Component {
         }
 
         ajax.get(url);
-        
+
         this.setState({
             sent: true,
         })
@@ -70,6 +70,8 @@ class PhoneScriptForm extends Component {
                   We will connect you to the offices of your senators. You can tell them:
                   <PhoneScriptText />
                   After each conversation, you can press * and we’ll connect you to the next office.
+                  <br></br>
+                  Or dial <a href="tel:+12028998938">202-899-8938</a> to connect.
                 </div>
                   <h4>Who did you speak with?</h4>
                   <input required="required" type="text" name="Who did you speak with?" id="who" style={{'fontSize': '24px', 'height': '50px'}} />
