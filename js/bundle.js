@@ -5283,6 +5283,11 @@
 	      });
 	    }
 	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.scrollTo(0, 0);
+	    }
+	  }, {
 	    key: 'callMade',
 	    value: function callMade(evt) {
 	      evt.preventDefault();
