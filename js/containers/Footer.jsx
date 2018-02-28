@@ -15,10 +15,6 @@ class Footer extends Component {
                               <a target="_blank">
                                   <img alt="Common Defense" src="images/Common-Defense-logo_preview.png" />
                               </a>
-                              
-                              <a target="_blank">
-                                  <img alt="Credo" src="images/CREDO-logo_preview.png" />
-                              </a>
                             
                               <a target="_blank">
                                   <img alt="Daily Kos" src="images/DailyKosLogo.png" />
