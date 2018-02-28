@@ -1757,6 +1757,11 @@ template {
     opacity: 0;
 }
 
+div#video {
+    display:flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 600px) {
     .bftn-homepage #leaderboard .leaderboard-day {
         width: 100%;
