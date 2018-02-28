@@ -14,7 +14,7 @@ class PhoneScriptForm extends Component {
          
          this.onClickSendFeedback = this.onClickSendFeedback.bind(this)
     }
-    
+
     onClickSendFeedback(e) {
         e.preventDefault();
 
@@ -43,14 +43,16 @@ class PhoneScriptForm extends Component {
         }
 
         ajax.get(url);
-
+        
         this.setState({
             sent: true,
         })
+            
     }
+
     render() {
       let button = null
-      if(this.setState.sent){
+      if(this.state.sent){
         button = (
           <button className="btn" >Thank You!</button>
         )

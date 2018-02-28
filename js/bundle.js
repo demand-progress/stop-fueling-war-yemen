@@ -5271,8 +5271,8 @@
 	    var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 	
 	    _this.state = (0, _utils.getQueryVariables)();
-	    _this.state.submitted = false;
-	    _this.state.callMade = false;
+	    _this.state.submitted = true;
+	    _this.state.callMade = true;
 	    _this.state.emailAction = false;
 	
 	    _this.callMade = _this.callMade.bind(_this);
@@ -5455,7 +5455,7 @@
 	        key: 'render',
 	        value: function render() {
 	            var button = null;
-	            if (this.setState.sent) {
+	            if (this.state.sent) {
 	                button = _react2.default.createElement(
 	                    'button',
 	                    { className: 'btn' },
@@ -5610,7 +5610,7 @@
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            '"I am a constituent of Senator _____. Please support the Sanders-Lee resolution that would end American involvement in the war on Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop."'
+	            '"I am a constituent of Senator _____. Please support the Sanders-Lee resolution that would end American involvement in the war in Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop."'
 	        )
 	    );
 	};
