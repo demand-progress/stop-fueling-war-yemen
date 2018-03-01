@@ -55,6 +55,10 @@ class Footer extends Component {
                               <a target="_blank">
                                   <img alt="Stand" src="images/stand_rebrand_logo-transparent-bg_preview.png" />
                               </a>
+
+                               <a target="_blank">
+                                  <img alt="United For Peace And Justice" src="images/utpj.png" />
+                              </a>
                               
                               <a target="_blank">
                                   <img alt="Win Without War" src="images/winwithoutwar.jpg" />
@@ -86,10 +90,6 @@ class Footer extends Component {
                               
                               <a target="_blank">
                                   <img alt="Our Revolution" src="images/OR-logo_preview.png" />
-                              </a>
-                              
-                              <a target="_blank">
-                                  <img alt="United For Peace And Justice" src="images/utpj.png" />
                               </a>
                   
                               <a target="_blank">
