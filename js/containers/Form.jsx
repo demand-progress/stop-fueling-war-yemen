@@ -25,15 +25,17 @@ class Form extends Component {
     }
 
     componentDidMount () {
-      window.scrollTo(0, 0)
+      window.scrollTo( 0, 0);
     }
-    
+
     callMade(evt) {
       evt.preventDefault();
       setTimeout(function() { 
         this.setState({
             submitted: false,
             callMade: true
+          }, function(){
+            window.scrollTo( 0, 0);
           }) 
         }.bind(this), 5000)  
     }
@@ -43,8 +45,11 @@ class Form extends Component {
       setTimeout(function() { 
         this.setState({
           submitted: true
+        }, function(){
+          window.scrollTo( 0, 0);
         })
         }.bind(this), 5000)
+       
     }
     
     
