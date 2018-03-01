@@ -1926,6 +1926,63 @@ template {
     }
 }
 
+/* button styling under video */
+
+.button-share {
+    width: 45%;
+}
+
+#share-button-container {
+    width: 75%;
+    height: 80px;
+}
+
+#share-button-container .social-media {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+} 
+
+#share-button-container .social-media .twitter {
+    background-color: #2ecaf8;
+} 
+
+#share-button-container .social-media a {
+    display: block;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    height: 50px;
+    padding: 0 45px 0 15px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    /* margin: 10px; */
+} 
+
+#share-button-container .social-media .facebook {
+    background-color: #224769;
+} 
+
+#share-button-container .social-media img {
+    position: absolute;
+    height: 40px;
+    top: 5px;
+    right: 15px;
+} 
+
+#share-button-container .social-media {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+} 
+
 @media screen and (max-width: 930px) {
     .bftn-homepage .hero {
         margin-bottom: 20px;
@@ -2031,9 +2088,23 @@ template {
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
     .bftn-homepage #footer .built-by {
         width: auto;
+    }
+
+    #share-button-container {
+        height: 120px;
+    }
+
+    #share-button-container .social-media {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .social-media .button-share {
+       margin-bottom: 10px;
+       width: 100%
     }
 }
 
@@ -2092,6 +2163,7 @@ body.modal-open-thanks {
   text-shadow: 0 0 black;
   font-weight: bold;
 }
+
 
 .modal-wrapper-thanks {
   position: fixed;
