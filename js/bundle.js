@@ -5295,6 +5295,8 @@
 	        this.setState({
 	          submitted: false,
 	          callMade: true
+	        }, function () {
+	          window.scrollTo(0, 0);
 	        });
 	      }.bind(this), 5000);
 	    }
@@ -5305,6 +5307,8 @@
 	      setTimeout(function () {
 	        this.setState({
 	          submitted: true
+	        }, function () {
+	          window.scrollTo(0, 0);
 	        });
 	      }.bind(this), 5000);
 	    }
