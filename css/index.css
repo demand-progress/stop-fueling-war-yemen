@@ -2006,6 +2006,15 @@ template {
     .bftn-homepage button.btn, .bftn-homepage a.btn {
         width: 100%;
     }
+    #share-button-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #share-button-container{
+        width: 92%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -2085,6 +2094,20 @@ template {
 
     .bftn-homepage .hero .call-action-form h3 {
         font-size: 39px;
+    }
+
+    #share-button-container {
+        height: 120px;
+    }
+
+    #share-button-container .social-media {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .social-media .button-share {
+       margin-bottom: 10px;
+       width: 100%
     }
 }
 
