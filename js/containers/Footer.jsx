@@ -55,6 +55,10 @@ class Footer extends Component {
                               <a target="_blank">
                                   <img alt="Stand" src="images/stand_rebrand_logo-transparent-bg_preview.png" />
                               </a>
+
+                               <a target="_blank">
+                                  <img alt="United For Peace And Justice" src="images/utpj.png" />
+                              </a>
                               
                               <a target="_blank">
                                   <img alt="Win Without War" src="images/winwithoutwar.jpg" />
@@ -87,10 +91,6 @@ class Footer extends Component {
                               <a target="_blank">
                                   <img alt="Our Revolution" src="images/OR-logo_preview.png" />
                               </a>
-                              
-                              <a target="_blank">
-                                  <img alt="United For Peace And Justice" src="images/utpj.png" />
-                              </a>
                   
                               <a target="_blank">
                                   <img alt="The Yemen Peace Project" src="images/YPP-logo_preview.png" />
@@ -111,7 +111,7 @@ class Footer extends Component {
                             </p>
                         </div>
                         <div className="social-media">
-                            <a className="twitter" href="https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen." target="_blank">
+                            <a className="twitter" href="https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us" target="_blank">
                                 <img src="images/twitter_white.svg" />
                                 <span>Share on twitter</span>
                             </a>

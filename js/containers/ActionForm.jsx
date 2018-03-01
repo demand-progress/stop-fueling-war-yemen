@@ -137,7 +137,7 @@ class ActionForm extends Component {
                 Yemen is facing a massive humanitarian catastrophe and we need your help to stop it. American aid is crucial to the Saudi war effort, and removing our assistance would limit Saudi attacks and maybe even push them to the negotiating table.  
               </strong>
                 <br/><br/>
-                <div>Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.</div>
+                <div>Email your lawmakers now and tell them to support the War Powers Resolution S.J.Res. 54 to end US support for the Saudi-led war in Yemen.</div>
                 <br/><br/>
                 <div>Add your name to send a message (below) to Congress:</div>
             </div>
@@ -162,7 +162,7 @@ class ActionForm extends Component {
           </p>
           <p style={{color: 'white', textAlign: 'center'}}>
             <i>
-              As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.
+              As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution S.J.Res. 54 sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.
             </i>
           </p>
           <hr/>

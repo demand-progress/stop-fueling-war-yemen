@@ -4961,6 +4961,11 @@
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "United For Peace And Justice", src: "images/utpj.png" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Win Without War", src: "images/winwithoutwar.jpg" })
 	                                ),
 	                                _react2.default.createElement(
@@ -5001,11 +5006,6 @@
 	                                    "a",
 	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Our Revolution", src: "images/OR-logo_preview.png" })
-	                                ),
-	                                _react2.default.createElement(
-	                                    "a",
-	                                    { target: "_blank" },
-	                                    _react2.default.createElement("img", { alt: "United For Peace And Justice", src: "images/utpj.png" })
 	                                ),
 	                                _react2.default.createElement(
 	                                    "a",
@@ -5057,7 +5057,7 @@
 	                                { className: "social-media" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { className: "twitter", href: "https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.", target: "_blank" },
+	                                    { className: "twitter", href: "https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us", target: "_blank" },
 	                                    _react2.default.createElement("img", { src: "images/twitter_white.svg" }),
 	                                    _react2.default.createElement(
 	                                        "span",
@@ -5618,7 +5618,7 @@
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            '"I am a constituent of Senator _____. Please support the Sanders-Lee resolution that would end American involvement in the war in Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop."'
+	            '"I am a constituent of Senator _____. Please support the Sanders-Lee resolution S.J.Res. 54 that would end American involvement in the war in Yemen. American military aid is fueling a humanitarian crisis, and it is time for this to stop."'
 	        )
 	    );
 	};
@@ -5996,7 +5996,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            null,
-	            'Email your lawmakers now and tell them to support the War Powers Resolution to end US support for the Saudi-led war in Yemen.'
+	            'Email your lawmakers now and tell them to support the War Powers Resolution S.J.Res. 54 to end US support for the Saudi-led war in Yemen.'
 	          ),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
@@ -6055,7 +6055,7 @@
 	          _react2.default.createElement(
 	            'i',
 	            null,
-	            'As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.'
+	            'As your constituent, I urge you to take action to end American complicity in the Saudi-led war in Yemen. We cannot sit by while our government increases suffering in a country devastated by conflict, cholera, and famine. I strongly urge you to co-sponsor and support the bipartisan War Powers Resolution S.J.Res. 54 sponsored by Sens. Bernie Sanders (D-VT) and Mike Lee (R-UT). The privileged resolution would end U.S. military involvement in the Saudi-led war in Yemen.'
 	          )
 	        ),
 	        _react2.default.createElement('hr', null)
@@ -6116,7 +6116,7 @@
 	                    { className: 'button-share' },
 	                    _react2.default.createElement(
 	                        'a',
-	                        { className: 'twitter', href: 'https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.', target: '_blank' },
+	                        { className: 'twitter', href: 'https://twitter.com/intent/tweet?text=Our%20public%20dollars%20are%20fueling%20the%20worst%20humanitarian%20crisis%20on%20the%20globe.%20It%27s%20up%20to%20us%20to%20stop%20it.%20Urge%20your%20Sen%20to%20cosponsor%20%23SandersLeeYemen%20resolution%20%26%20cut%20off%20U.S.%20support%20for%20Saudi%20Arabia%27s%20brutal%20war%20in%20%23Yemen.%20www.Stopthewar.us', target: '_blank' },
 	                        _react2.default.createElement('img', { src: 'images/twitter_white.svg' }),
 	                        _react2.default.createElement(
 	                            'span',
