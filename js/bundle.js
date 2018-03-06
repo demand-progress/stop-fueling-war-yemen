@@ -4906,6 +4906,11 @@
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "About Face", src: "images/About Face Logo.jpg" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Common Defense", src: "images/Common-Defense-logo_preview.png" })
 	                                ),
 	                                _react2.default.createElement(
@@ -4990,12 +4995,22 @@
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "Anti War", src: "images/Antiwarcom logo.png" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Code Pink", src: "images/CP_logo_preview(1).jpeg" })
 	                                ),
 	                                _react2.default.createElement(
 	                                    "a",
 	                                    { target: "_blank" },
 	                                    _react2.default.createElement("img", { alt: "Credo", src: "images/CREDO-logo_preview.png" })
+	                                ),
+	                                _react2.default.createElement(
+	                                    "a",
+	                                    { target: "_blank" },
+	                                    _react2.default.createElement("img", { alt: "Mpower Change", src: "images/FreedomForward logo.jpeg" })
 	                                ),
 	                                _react2.default.createElement(
 	                                    "a",
