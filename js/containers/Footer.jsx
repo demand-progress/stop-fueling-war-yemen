@@ -11,7 +11,11 @@ class Footer extends Component {
                         <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
                         <p style={{marginBottom: "50px"}}><br/><br/>Participating organizations:</p>  
                           <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor:"white"}}>
-                
+            
+                             <a target="_blank">
+                                  <img alt="About Face" src="images/About Face Logo.jpg" />
+                              </a>
+
                               <a target="_blank">
                                   <img alt="Common Defense" src="images/Common-Defense-logo_preview.png" />
                               </a>
