@@ -11,7 +11,11 @@ class Footer extends Component {
                         <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
                         <p style={{marginBottom: "50px"}}><br/><br/>Participating organizations:</p>  
                           <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor:"white"}}>
-                
+            
+                             <a target="_blank">
+                                  <img alt="About Face" src="images/About Face Logo.jpg" />
+                              </a>
+
                               <a target="_blank">
                                   <img alt="Common Defense" src="images/Common-Defense-logo_preview.png" />
                               </a>
@@ -75,13 +79,21 @@ class Footer extends Component {
                           </div>
                           <p style={{marginBottom: "50px"}}>Endorsing organizations:</p> 
                           <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center", marginTop: "-50px", borderBottomColor:"white"}}>
-                          
+                             
+                             <a target="_blank">
+                                  <img alt="Anti War" src="images/Antiwarcom logo.png" />
+                              </a>
+
                               <a target="_blank">
                                   <img alt="Code Pink" src="images/CP_logo_preview(1).jpeg" />
                               </a>
                             
                               <a target="_blank">
                                   <img alt="Credo" src="images/CREDO-logo_preview.png" />
+                              </a>
+                             
+                              <a target="_blank">
+                                  <img alt="Mpower Change" src="images/FreedomForward logo.jpeg" />
                               </a>
                               
                               <a target="_blank">
