@@ -5335,7 +5335,7 @@
 	      if (this.state.callMade) {
 	        form = _react2.default.createElement(_PhoneScript2.default, null);
 	      } else if (this.state.emailAction || this.state.submitted) {
-	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade });
+	        form = _react2.default.createElement(_CallInitiate2.default, { callMade: this.callMade, callActionEmailForm: this.state.emailAction });
 	      } else {
 	        form = _react2.default.createElement(_ActionForm2.default, { formSubmitted: this.formSubmitted });
 	      }
@@ -5745,16 +5745,29 @@
 	          _react2.default.createElement('img', { src: 'images/phone.svg' })
 	        );
 	      }
+	
+	      var headerText = null;
+	
+	      if (this.props.callActionEmailForm) {
+	        headerText = _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Now, could you make a call to your senators?'
+	        );
+	      } else {
+	        headerText = _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Thanks for signing ',
+	          _react2.default.createElement('br', null),
+	          'Now, could you make a call to your senators?'
+	        );
+	      }
+	
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'bftn-form call-action-form', id: 'signThePetition' },
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          'Thanks for signing. ',
-	          _react2.default.createElement('br', null),
-	          'Now, could you make a call to your senators?'
-	        ),
+	        headerText,
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
