@@ -61,7 +61,7 @@ class Form extends Component {
           )    
         } else if(this.state.emailAction || this.state.submitted) {
           form = (
-            < CallInitiate callMade={ this.callMade }/>
+            < CallInitiate callMade={ this.callMade } callActionEmailForm= {this.state.emailAction} />
           )
         } else {
           form = (
