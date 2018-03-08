@@ -59,9 +59,18 @@ class CallInitiate extends Component {
           <img src="images/phone.svg" />
         </button>)
       }
+
+      let headerText = null
+
+      if(this.props.callActionEmailForm){
+        headerText = (<h3>Now, could you make a call to your senators?</h3>)
+      } else {
+        headerText = (<h3>Thanks for signing <br/>Now, could you make a call to your senators?</h3>)
+      }
+
         return (
           <div className="bftn-form call-action-form" id="signThePetition">
-            <h3>Thanks for signing. <br/>Now, could you make a call to your senators?</h3>
+            {headerText}
             <br/><br/>
             <div style={{color: 'white', lineHeight: 1.5}}>
               <strong style={{ fontSize: "25px" }}>
